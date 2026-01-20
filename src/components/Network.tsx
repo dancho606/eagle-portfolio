@@ -26,7 +26,7 @@ export function Network() {
                             key={i}
                             className="text-lg md:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white/50"
                         >
-                            {kol}
+                            {kol.name}
                         </span>
                     ))}
                 </motion.div>

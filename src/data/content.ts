@@ -10,6 +10,8 @@ interface ServiceItem {
     link: string;
     icon: LucideIcon;
     image: string;
+    description?: string;
+    color?: string;
 }
 
 interface VentureItem {
@@ -18,6 +20,8 @@ interface VentureItem {
     link: string;
     icon: LucideIcon;
     image: string;
+    description?: string;
+    bg?: string;
 }
 
 export const services: ServiceItem[] = [
@@ -25,55 +29,73 @@ export const services: ServiceItem[] = [
         title: '我是廠商\n想找貴司合作',
         link: 'https://lin.ee/jFkOyph',
         icon: Handshake,
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+        description: '專業的品牌合作諮詢服務',
+        color: 'text-blue-400'
     },
     {
         title: '廣告素材\n文案製作\n平面設計',
         link: '#',
         icon: Palette,
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+        description: '創意設計與文案撰寫',
+        color: 'text-purple-400'
     },
     {
         title: '社群代操\n廣告投放\n口碑行銷',
         link: '#',
         icon: MessageCircle,
-        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800',
+        description: '全方位社群媒體管理',
+        color: 'text-green-400'
     },
     {
         title: '影音範例\nYoutube',
         link: 'https://www.youtube.com/watch?v=DBqGuTVDsHE',
         icon: Youtube,
-        image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800',
+        description: '專業影音製作服務',
+        color: 'text-red-400'
     },
     {
         title: '媒體新聞\n電視新聞\n新聞專訪',
         link: '#',
         icon: Tv,
-        image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=800',
+        description: '媒體公關與新聞發布',
+        color: 'text-yellow-400'
     },
     {
         title: 'AI動畫\n短影音\n形象影片',
         link: '#',
         icon: Clapperboard,
-        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+        description: 'AI驅動的影片製作',
+        color: 'text-pink-400'
     },
     {
         title: 'LED戶外廣告\nLED車體廣告',
         link: '#',
         icon: Building2,
-        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
+        description: '戶外廣告投放服務',
+        color: 'text-orange-400'
     },
     {
         title: '商標申請\n法律諮詢',
         link: '#',
         icon: Scale,
-        image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
+        description: '智慧財產權保護',
+        color: 'text-cyan-400'
     },
     {
         title: '雄鷹廣告\n動態簡報',
         link: 'https://www.canva.com/design/DAGLxLOB7iY/EOcaAk8IipCXuyQU1XYzUQ/view',
         icon: FileText,
-        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800'
+        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
+        description: '專業簡報設計服務',
+        color: 'text-indigo-400'
     }
 ];
 
@@ -116,8 +138,40 @@ export const kols: { name: string, image: string }[] = [
 ];
 
 export const ventures: VentureItem[] = [
-    { title: '厚普旅遊\nHope Tour', subtitle: '全台唯一明星旅遊專賣店', link: '#', icon: Plane, image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800' },
-    { title: 'TGE Golf', subtitle: '高爾夫球教學\n球具買賣', link: '#', icon: Trophy, image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800' },
-    { title: '室內設計裝修', subtitle: '老屋翻新\n商業空間', link: '#', icon: Home, image: 'https://images.unsplash.com/photo-1616486338812-3aeee7e36509?auto=format&fit=crop&q=80&w=800' },
-    { title: '宅經濟電商', subtitle: '蝦皮賣場\n聯名合作', link: '#', icon: ShoppingBag, image: 'https://images.unsplash.com/photo-1472851294608-4155f2118c67?auto=format&fit=crop&q=80&w=800' }
+    {
+        title: '厚普旅遊\nHope Tour',
+        subtitle: '全台唯一明星旅遊專賣店',
+        link: '#',
+        icon: Plane,
+        image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800',
+        description: '提供明星級旅遊體驗',
+        bg: 'from-blue-500 to-cyan-500'
+    },
+    {
+        title: 'TGE Golf',
+        subtitle: '高爾夫球教學\n球具買賣',
+        link: '#',
+        icon: Trophy,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800',
+        description: '專業高爾夫球訓練',
+        bg: 'from-green-500 to-emerald-500'
+    },
+    {
+        title: '室內設計裝修',
+        subtitle: '老屋翻新\n商業空間',
+        link: '#',
+        icon: Home,
+        image: 'https://images.unsplash.com/photo-1616486338812-3aeee7e36509?auto=format&fit=crop&q=80&w=800',
+        description: '打造理想空間',
+        bg: 'from-orange-500 to-amber-500'
+    },
+    {
+        title: '宅經濟電商',
+        subtitle: '蝦皮賣場\n聯名合作',
+        link: '#',
+        icon: ShoppingBag,
+        image: 'https://images.unsplash.com/photo-1472851294608-4155f2118c67?auto=format&fit=crop&q=80&w=800',
+        description: '電商平台經營',
+        bg: 'from-purple-500 to-pink-500'
+    }
 ];

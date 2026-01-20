@@ -8,7 +8,7 @@ interface GridCardProps {
     image?: string;
 }
 
-export function GridCard({ title, subtitle, href = "#", icon: Icon, image }: GridCardProps) {
+export function GridCard({ title, subtitle, href = "#", image }: GridCardProps) {
     return (
         <a
             href={href}
