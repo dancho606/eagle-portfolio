@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-100: #FFF9C4;
+  --color-gold-200: #FFF59D;
+  --color-gold-300: #FFF176;
+  --color-gold-400: #FCD34D;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #B4941F;
+  --color-gold-700: #8C7318;
+
+  --color-navy-800: #1E293B;
+  --color-navy-900: #0F172A;
+  --color-navy-950: #020617;
+
+  --image-hero-pattern: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop');
+  --image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-950 text-white antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  .glass-card {
+    @apply bg-navy-900/50 backdrop-blur-md border border-white/10;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-navy-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-600 rounded-full hover:bg-gold-500 transition-colors;
+}
