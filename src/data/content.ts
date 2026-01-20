@@ -175,3 +175,14 @@ export const ventures: VentureItem[] = [
         bg: 'from-purple-500 to-pink-500'
     }
 ];
+
+export const portfolio = {
+    video: {
+        items: [
+            { id: 'DBqGuTVDsHE' }
+        ]
+    },
+    design: {
+        link: 'https://www.facebook.com/tge.tiptop.genius/'
+    }
+};
