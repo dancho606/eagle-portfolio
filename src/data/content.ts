@@ -1,86 +1,123 @@
-import { Palette, Megaphone, Tv, Truck, Scale, Plane, Trophy, Home, ShoppingBag } from 'lucide-react';
+import {
+    Handshake, Palette, MessageCircle, Youtube,
+    Tv, Clapperboard, Building2, Scale,
+    FileText, Plane, Trophy, Home, ShoppingBag
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
-export const services = [
+interface ServiceItem {
+    title: string;
+    link: string;
+    icon: LucideIcon;
+    image: string;
+}
+
+interface VentureItem {
+    title: string;
+    subtitle: string;
+    link: string;
+    icon: LucideIcon;
+    image: string;
+}
+
+export const services: ServiceItem[] = [
     {
+        title: '我是廠商\n想找貴司合作',
+        link: 'https://lin.ee/jFkOyph',
+        icon: Handshake,
+        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800'
+    },
+    {
+        title: '廣告素材\n文案製作\n平面設計',
+        link: '#',
         icon: Palette,
-        title: '數位廣告行銷',
-        description: '素材製圖 / 商業企劃 / 文案撰寫 / 平面設計 / 名片Logo',
-        color: 'text-blue-400'
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
     },
     {
-        icon: Megaphone,
-        title: '社群代操經營',
-        description: '廣告投放 / 口碑行銷 / 流量變現 / 粉絲互動',
-        color: 'text-purple-400'
+        title: '社群代操\n廣告投放\n口碑行銷',
+        link: '#',
+        icon: MessageCircle,
+        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
     },
     {
+        title: '影音範例\nYoutube',
+        link: 'https://www.youtube.com/watch?v=DBqGuTVDsHE',
+        icon: Youtube,
+        image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800'
+    },
+    {
+        title: '媒體新聞\n電視新聞\n新聞專訪',
+        link: '#',
         icon: Tv,
-        title: '媒體公關',
-        description: '電視新聞 / 新聞專訪 / 媒體曝光 / 危機處理',
-        color: 'text-green-400'
+        image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=800'
     },
     {
-        icon: Truck,
-        title: '戶外廣告',
-        description: 'LED戶外電視牆 / LED車體廣告 / 實體看板',
-        color: 'text-orange-400'
+        title: 'AI動畫\n短影音\n形象影片',
+        link: '#',
+        icon: Clapperboard,
+        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
     },
     {
+        title: 'LED戶外廣告\nLED車體廣告',
+        link: '#',
+        icon: Building2,
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+    },
+    {
+        title: '商標申請\n法律諮詢',
+        link: '#',
         icon: Scale,
-        title: '法律顧問',
-        description: '商標專利 / 法律諮詢 / 合約擬定',
-        color: 'text-red-400'
+        image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800'
+    },
+    {
+        title: '雄鷹廣告\n動態簡報',
+        link: 'https://www.canva.com/design/DAGLxLOB7iY/EOcaAk8IipCXuyQU1XYzUQ/view',
+        icon: FileText,
+        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800'
     }
 ];
 
-export const ventures = [
-    {
-        icon: Plane,
-        title: '厚普旅遊 Hope Tour',
-        description: '全台唯一明星旅遊專賣店，打造獨特尊榮的旅遊體驗。',
-        link: '#',
-        bg: 'from-blue-900 to-blue-800'
-    },
-    {
-        icon: Trophy,
-        title: 'TGE Golf',
-        description: '高爾夫球教學 / 球具買賣 / 球場代訂，專業一條龍服務。',
-        link: '#',
-        bg: 'from-green-900 to-green-800'
-    },
-    {
-        icon: Home,
-        title: '室內設計裝修',
-        description: '老屋翻新 / 商業空間 / 軟裝設計 / 招牌製作',
-        link: '#',
-        bg: 'from-orange-900 to-orange-800'
-    },
-    {
-        icon: ShoppingBag,
-        title: '宅經濟電商',
-        description: '蝦皮賣場聯名合作，協助品牌與KOL進行流量變現。',
-        link: '#',
-        bg: 'from-purple-900 to-purple-800'
-    }
+export const kols: { name: string, image: string }[] = [
+    { name: '董湘鈴 Lena', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800' },
+    { name: '陳詩縈 Sarah', image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800' },
+    { name: '星兒 Sylivia', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800' },
+    { name: '楊菓菓 Candice', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800' },
+    { name: '嚴淑明 Mandy Yan', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800' },
+    { name: '謝NN', image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=800' },
+    { name: '鹿鹿 Luz', image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=800' },
+    { name: '謝子芯 LeNa', image: 'https://images.unsplash.com/photo-1516575334481-f85287c2c81d?auto=format&fit=crop&q=80&w=800' },
+    { name: '水果姐姐 Mimi', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800' },
+    { name: '凱哥的媽媽咪呀', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800' },
+    { name: '跟著Rhea慢生活', image: 'https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=800' },
+    { name: '木瓜米米 Debby', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800' },
+    { name: '金貝貝 BayKi', image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800' },
+    { name: '楊琪琪 Doris', image: 'https://images.unsplash.com/photo-1485290334039-a3c69043e517?auto=format&fit=crop&q=80&w=800' },
+    { name: '翁子涵 Adurina', image: 'https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&q=80&w=800' },
+    { name: '梁軒安 Eagle', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800' },
+    { name: '王俐喬 Josephine', image: 'https://images.unsplash.com/photo-1534751516092-75f9322e7dce?auto=format&fit=crop&q=80&w=800' },
+    { name: '蕭淑慎 Kitty', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800' },
+    { name: '糖糖 Tang Tang', image: 'https://images.unsplash.com/photo-1504703395950-b89145a5425b?auto=format&fit=crop&q=80&w=800' },
+    { name: '葉子 葉香吟', image: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&q=80&w=800' },
+    { name: '李佩娟 Phoebe', image: 'https://images.unsplash.com/photo-1485893086445-ed75865eb766?auto=format&fit=crop&q=80&w=800' },
+    { name: '蔡甜甜 Brandy', image: 'https://images.unsplash.com/photo-1523264939339-c89f9dadde2e?auto=format&fit=crop&q=80&w=800' },
+    { name: '余曼曼 Amanda', image: 'https://images.unsplash.com/photo-1514315384763-ba401779410f?auto=format&fit=crop&q=80&w=800' },
+    { name: '甜心Q匠 Sweet', image: 'https://images.unsplash.com/photo-1504199600962-eb6368877afb?auto=format&fit=crop&q=80&w=800' },
+    { name: '王沁芳 Angel', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=800' },
+    { name: '品艾 Abby', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800' },
+    { name: '李海莉 Hayley', image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&q=80&w=800' },
+    { name: '凡妮莎 Vanessa', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800' },
+    { name: '薩琳 Serene', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800' },
+    { name: '簡湘穎 Emma', image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800' },
+    { name: '黃菲菲 Amber', image: 'https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=800' },
+    { name: '瑋哥 Wego', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800' },
+    { name: 'E小姐不購物會憂鬱', image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=800' },
+    { name: '王破崙 Kiki', image: 'https://images.unsplash.com/photo-1496440738382-655787f27bf1?auto=format&fit=crop&q=80&w=800' },
+    { name: '琳娜 R-tina', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800' }
 ];
 
-export const portfolio = {
-    video: {
-        title: '影音作品集',
-        description: '精選商業廣告、形象短片與活動紀錄',
-        items: [
-            { type: 'youtube', id: 'DBqGuTVDsHE', title: '精選案例 1' },
-            // More items can be added here
-        ]
-    },
-    design: {
-        title: '設計案例',
-        description: '品牌視覺識別、平面設計與包裝設計',
-        link: 'https://www.facebook.com/Tge.tw'
-    }
-};
-
-export const kols = [
-    "董湘鈴 Lena", "嚴淑明 Mandy Yan", "翁子涵 Adurina", "梁軒安 Eagle", "蕭淑慎 Kitty",
-    "余曼曼 Amanda", "蓋兒 Gail", "林寧 LoLo", "張家瑋 Wien", "李萱 Hana", "NaNa", "KiKi"
+export const ventures: VentureItem[] = [
+    { title: '厚普旅遊\nHope Tour', subtitle: '全台唯一明星旅遊專賣店', link: '#', icon: Plane, image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800' },
+    { title: 'TGE Golf', subtitle: '高爾夫球教學\n球具買賣', link: '#', icon: Trophy, image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800' },
+    { title: '室內設計裝修', subtitle: '老屋翻新\n商業空間', link: '#', icon: Home, image: 'https://images.unsplash.com/photo-1616486338812-3aeee7e36509?auto=format&fit=crop&q=80&w=800' },
+    { title: '宅經濟電商', subtitle: '蝦皮賣場\n聯名合作', link: '#', icon: ShoppingBag, image: 'https://images.unsplash.com/photo-1472851294608-4155f2118c67?auto=format&fit=crop&q=80&w=800' }
 ];
