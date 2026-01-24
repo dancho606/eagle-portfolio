@@ -117,24 +117,24 @@ function App() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-24">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-24">
           {activeTab === 'services' && services.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
               <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
             </div>
           ))}
           {activeTab === 'kols' && kols.map((kol, i) => (
-            <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
+            <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
               <GridCard title={kol.name} image={kol.image} href={kol.link} lineLink={kol.line} />
             </div>
           ))}
           {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
               <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
             </div>
           ))}
           {activeTab === 'ventures' && ventures.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both] w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px]">
               <GridCard title={item.title} subtitle={item.subtitle} href={item.link} icon={item.icon} image={item.image} />
             </div>
           ))}
