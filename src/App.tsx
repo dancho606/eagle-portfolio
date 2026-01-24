@@ -15,74 +15,78 @@ function App() {
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
 
         {/* Editorial Hero */}
-        <div className="mb-24">
+        <div className="mb-32">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
 
-          {/* Main Visual Image - Premium Advertising Agency Vibe */}
-          <div className="w-full h-[300px] md:h-[450px] mb-12 rounded-3xl overflow-hidden relative border border-zinc-800 shadow-3xl group">
-            <img
-              src="/images/hero_main.jpg"
-              alt="TGE Hero Visual"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-
-            <div className="absolute bottom-8 md:bottom-12 left-8 md:left-12 right-8 md:right-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <div>
-                <div className="text-amber-500 font-bold tracking-[0.4em] mb-3 text-xs md:text-sm animate-pulse">VISIONARY MEDIA SOLUTIONS</div>
-                <h2 className="text-3xl md:text-6xl font-bold leading-none tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  領航品牌<span className="text-amber-500">視覺美學</span>
-                </h2>
-              </div>
-              <div className="hidden md:block text-right text-gray-400 text-xs tracking-[.25em] leading-relaxed max-w-xs uppercase">
-                Expertise in Integrated Marketing & Talent Management
-              </div>
-            </div>
-          </div>
-
-          {/* Asymmetric layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-            {/* Left: Bold branding */}
-            <div className="lg:col-span-7">
-              {/* Oversized logo */}
-              <div className="mb-8 relative inline-block">
-                <div className="absolute -inset-4 bg-gradient-to-br from-red-900/20 to-amber-600/10 blur-2xl"></div>
-                <div className="relative w-48 h-48 rounded-3xl overflow-hidden border-2 border-amber-500/30 shadow-2xl">
+            {/* Left: Dramatic Typography & Branding */}
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              {/* Logo Section */}
+              <div className="mb-12 relative inline-block group">
+                <div className="absolute -inset-6 bg-gradient-to-br from-red-600/20 to-amber-500/10 blur-3xl group-hover:from-red-600/30 transition-all duration-700"></div>
+                <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm">
                   <img
-                    src="/images/logo_new.jpg"
+                    src="/images/logo_v2.webp"
                     alt="Eagle Logo"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>
 
-              {/* Dramatic typography */}
-              <h1 className="text-7xl md:text-8xl font-bold mb-4 leading-none tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                <span className="block text-white">雄鷹</span>
-                <span className="block bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300 bg-clip-text text-transparent">娛樂文創</span>
-              </h1>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 text-amber-500 font-bold tracking-[0.5em] text-xs md:text-sm">
+                  <span className="w-12 h-px bg-amber-500/50"></span>
+                  VISIONARY MEDIA SOLUTIONS
+                </div>
 
-              <div className="text-sm tracking-[0.3em] text-amber-500/80 mb-8 font-medium">
-                TIPTOP GENIUS ENTERTAINMENT
-              </div>
+                <h1 className="text-7xl md:text-9xl font-bold leading-none tracking-tighter" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <span className="block text-white">雄鷹</span>
+                  <span className="block bg-gradient-to-r from-amber-200 via-amber-500 to-amber-200 bg-clip-text text-transparent">娛樂文創</span>
+                </h1>
 
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 border-2 border-amber-600/40 bg-amber-600/5">
-                <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                <span className="text-amber-400 font-bold tracking-wider">@TIP.TOP.TGE</span>
+                <div className="pt-4 flex flex-wrap items-center gap-6">
+                  <div className="text-sm tracking-[0.3em] text-gray-400 font-medium">TIPTOP GENIUS ENTERTAINMENT</div>
+                  <div className="px-4 py-1.5 border border-amber-500/30 rounded-full text-[10px] md:text-xs text-amber-500 font-bold tracking-widest uppercase bg-amber-500/5">
+                    Agency Portfolio 2026
+                  </div>
+                </div>
+
+                <div className="mt-12 max-w-xl">
+                  <div className="relative p-8 bg-zinc-900/30 backdrop-blur-md border border-zinc-800/50 rounded-2xl">
+                    <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-amber-500/30 -translate-x-2 -translate-y-2"></div>
+                    <p className="text-lg leading-relaxed text-gray-300 italic" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                      "擁有<span className="text-amber-400 font-semibold">十年以上整合行銷經驗</span>，累積上百件成功案例，為目前網路市場最具影響力的品牌推手之一。"
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex items-center gap-4">
+                  <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-amber-600/20 bg-amber-600/5 rounded-lg">
+                    <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                    <span className="text-amber-400 font-bold tracking-wider text-sm">@TIP.TOP.TGE</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right: Description */}
-            <div className="lg:col-span-5 relative">
-              <div className="absolute -top-4 -left-4 w-12 h-12 border-l-2 border-t-2 border-amber-600/30"></div>
-              <div className="absolute -bottom-4 -right-4 w-12 h-12 border-r-2 border-b-2 border-amber-600/30"></div>
+            {/* Right: Signature Visual Poster */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative aspect-square md:aspect-[4/5] lg:aspect-square overflow-hidden rounded-[2.5rem] border border-zinc-800 shadow-3xl group">
+                <img
+                  src="/images/hero_v2.webp"
+                  alt="CEO Visual Poster"
+                  className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
 
-              <div className="relative p-8 bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/50">
-                <p className="text-base leading-relaxed text-gray-300" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  擁有<span className="text-amber-400 font-semibold">十年以上整合行銷經驗</span>，累積上百件成功案例，為目前網路市場最具影響力的品牌推手之一。從品牌定位、設計行銷素材、廣告投放到社群經營與個人IP打造，提供<span className="text-amber-400 font-semibold">一條龍客製化服務</span>。
-                </p>
+                {/* Visual Label */}
+                <div className="absolute bottom-10 right-10 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="text-[10px] tracking-[0.3em] text-amber-500 font-bold">EXECUTIVE SELECTION</div>
+                  <div className="text-2xl font-bold tracking-tighter mt-1 italic">LEONARD LIANG</div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
 
