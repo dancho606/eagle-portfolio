@@ -173,9 +173,8 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
 
-      {/* Pricing Section (Demo for User) */ }
+      {/* Pricing Section (Demo for User) */}
       <PricingSection />
 
       <style>{`
