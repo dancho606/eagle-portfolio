@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures } from './data/content';
+import { services, kols, ventures, caseMatch } from './data/content';
 
-type Tab = 'services' | 'kols' | 'ventures';
+type Tab = 'services' | 'kols' | 'caseMatch' | 'ventures';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('services');
@@ -85,16 +85,17 @@ function App() {
         {/* Tab Selection */}
         <div className="mb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="flex gap-2 bg-zinc-950 border border-zinc-800 p-1.5 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-2 bg-zinc-950 border border-zinc-800 p-1.5 rounded-xl">
               {[
                 { id: 'services' as Tab, label: '專業服務' },
                 { id: 'kols' as Tab, label: 'KOL陣容' },
+                { id: 'caseMatch' as Tab, label: '案件媒合' },
                 { id: 'ventures' as Tab, label: '關係企業' }
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`group relative flex-1 py-4 px-4 font-bold text-base transition-all duration-300 overflow-hidden whitespace-nowrap rounded-md ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
+                  className={`group relative min-w-[120px] flex-1 py-4 px-4 font-bold text-base transition-all duration-300 overflow-hidden whitespace-nowrap rounded-lg ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
                     }`}
                 >
                   {activeTab === tab.id && (
@@ -117,6 +118,11 @@ function App() {
           {activeTab === 'kols' && kols.map((kol, i) => (
             <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
               <GridCard title={kol.name} image={kol.image} />
+            </div>
+          ))}
+          {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
+              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
             </div>
           ))}
           {activeTab === 'ventures' && ventures.map((item, i) => (

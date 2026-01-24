@@ -26,14 +26,6 @@ interface VentureItem {
 
 export const services: ServiceItem[] = [
     {
-        title: '我是廠商\n想找貴司合作',
-        link: 'https://lin.ee/jFkOyph',
-        icon: Handshake,
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
-        description: '專業的品牌合作諮詢服務',
-        color: 'text-blue-400'
-    },
-    {
         title: '廣告素材\n文案製作\n平面設計',
         link: '#',
         icon: Palette,
@@ -96,6 +88,17 @@ export const services: ServiceItem[] = [
         image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
         description: '專業簡報設計服務',
         color: 'text-indigo-400'
+    }
+];
+
+export const caseMatch: ServiceItem[] = [
+    {
+        title: '我是廠商\n想找貴司合作',
+        link: 'https://lin.ee/jFkOyph',
+        icon: Handshake,
+        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+        description: '專業的品牌合作諮詢服務',
+        color: 'text-blue-400'
     }
 ];
 
