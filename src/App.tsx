@@ -20,11 +20,11 @@ function App() {
           {/* Main Visual Image - Premium Advertising Agency Vibe */}
           <div className="w-full h-[300px] md:h-[450px] mb-12 rounded-3xl overflow-hidden relative border border-zinc-800 shadow-3xl group">
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+              src="/images/hero_main.jpg"
               alt="TGE Hero Visual"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
 
             <div className="absolute bottom-8 md:bottom-12 left-8 md:left-12 right-8 md:right-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
@@ -47,8 +47,12 @@ function App() {
               {/* Oversized logo */}
               <div className="mb-8 relative inline-block">
                 <div className="absolute -inset-4 bg-gradient-to-br from-red-900/20 to-amber-600/10 blur-2xl"></div>
-                <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-red-950 via-red-900 to-red-950 border-4 border-amber-500 flex items-center justify-center shadow-2xl">
-                  <span className="text-6xl">🦅</span>
+                <div className="relative w-48 h-48 rounded-3xl overflow-hidden border-2 border-amber-500/30 shadow-2xl">
+                  <img
+                    src="/images/logo_new.jpg"
+                    alt="Eagle Logo"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
