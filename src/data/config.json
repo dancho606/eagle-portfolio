@@ -73,6 +73,14 @@
             "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
             "description": "專業的品牌合作諮詢服務",
             "color": "text-blue-400"
+        },
+        {
+            "title": "我有專業\n想找案件",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Briefcase",
+            "image": "/images/talent_consultation.png",
+            "description": "專業人才資源開發與案件媒合",
+            "color": "text-amber-400"
         }
     ],
     "kols": [
