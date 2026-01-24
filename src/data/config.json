@@ -289,9 +289,9 @@
     ],
     "ventures": [
         {
-            "title": "厚普旅遊\nHope Tour",
+            "title": "明星之旅-Hope Tour (旅行社)",
             "subtitle": "全台唯一明星旅遊專賣店",
-            "link": "#",
+            "link": "https://www.facebook.com/hope.tour.tge",
             "iconName": "Plane",
             "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800",
             "description": "提供明星級旅遊體驗",
@@ -300,27 +300,27 @@
         {
             "title": "TGE Golf",
             "subtitle": "高爾夫球教學\n球具買賣",
-            "link": "#",
+            "link": "https://line.me/R/ti/p/@226mteho?ts=02022237&oat_content=url",
             "iconName": "Trophy",
             "image": "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800",
             "description": "專業高爾夫球訓練",
             "bg": "from-green-500 to-emerald-500"
         },
         {
-            "title": "室內設計裝修",
+            "title": "雄鷹設計 TGE Design",
             "subtitle": "老屋翻新\n商業空間",
-            "link": "#",
+            "link": "https://www.facebook.com/Tge.tw",
             "iconName": "Home",
-            "image": "https://images.unsplash.com/photo-1616486338812-3aeee7e36509?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/ventures_design.png",
             "description": "打造理想空間",
             "bg": "from-orange-500 to-amber-500"
         },
         {
             "title": "宅經濟電商",
             "subtitle": "蝦皮賣場\n聯名合作",
-            "link": "#",
+            "link": "https://shopee.tw/tge.shop.tw",
             "iconName": "ShoppingBag",
-            "image": "https://images.unsplash.com/photo-1472851294608-4155f2118c67?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/ventures_ecommerce.png",
             "description": "電商平台經營",
             "bg": "from-purple-500 to-pink-500"
         }
