@@ -117,7 +117,7 @@ function App() {
           ))}
           {activeTab === 'kols' && kols.map((kol, i) => (
             <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={kol.name} image={kol.image} />
+              <GridCard title={kol.name} image={kol.image} href={kol.link} lineLink={kol.line} />
             </div>
           ))}
           {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
