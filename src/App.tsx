@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { GridCard } from './components/GridCard';
+import { PricingSection } from './components/PricingSection';
 import { services, kols, ventures, caseMatch } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'ventures';
@@ -172,6 +173,10 @@ function App() {
           </div>
         </div>
       </div>
+    </div>
+
+      {/* Pricing Section (Demo for User) */ }
+      <PricingSection />
 
       <style>{`
         @keyframes fadeIn {
@@ -179,7 +184,7 @@ function App() {
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
-    </div>
+    </div >
   );
 }
 
