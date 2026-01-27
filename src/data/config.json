@@ -1,5 +1,30 @@
 {
+    "heroVideoId": "DnfWhkZ4oks",
     "services": [
+        {
+            "title": "機器人販售\nRobot Sales",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Bot",
+            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+            "description": "專業智能機器人銷售",
+            "color": "text-blue-400"
+        },
+        {
+            "title": "Ai獲客系統銷售\nAI Solutions",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Rocket",
+            "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+            "description": "AI驅動的高效獲客系統",
+            "color": "text-emerald-400"
+        },
+        {
+            "title": "活動承辦\n記者會\n開幕承辦",
+            "link": "https://youtu.be/uv6Vl3lKM78?si=r17OZCPt9rccW7b",
+            "iconName": "Mic",
+            "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
+            "description": "專業活動企劃與現場執行",
+            "color": "text-indigo-400"
+        },
         {
             "title": "廣告素材\n文案製作\n平面設計",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
@@ -18,7 +43,7 @@
         },
         {
             "title": "影音範例\nYoutube",
-            "link": "https://www.youtube.com/watch?v=DBqGuTVDsHE",
+            "link": "https://www.youtube.com/@%E9%9B%84%E9%B7%B9%E5%BB%A3%E5%91%8A.tiptop",
             "iconName": "Youtube",
             "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
             "description": "專業影音製作服務",
@@ -85,214 +110,249 @@
     ],
     "kols": [
         {
-            "name": "董湘鈴 Lena",
-            "image": "/images/KOL/elna.webp",
-            "link": "https://www.facebook.com/Dr.bo.tge",
-            "line": "https://lin.ee/jFkOyph"
-        },
-        {
-            "name": "陳詩縈 Sarah",
-            "image": "/images/KOL/陳詩縈.webp",
-            "link": "https://www.facebook.com/profile.php?id=61553643382380",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "星兒 Sylivia",
-            "image": "/images/KOL/星兒.webp",
-            "link": "https://www.facebook.com/sylvia.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
             "name": "楊菓菓 Candice",
             "image": "/images/KOL/楊菓菓Candice.webp",
             "link": "https://www.facebook.com/tge.candice",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "嚴淑明 Mandy Yan",
-            "image": "/images/KOL/嚴淑明 Mandy Yan.webp",
-            "link": "https://www.facebook.com/yanshuming",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "謝NN",
-            "image": "/images/KOL/謝NN.webp",
-            "link": "https://www.facebook.com/nn.tge/",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "鹿鹿 Luz",
-            "image": "/images/KOL/鹿鹿 Luz.webp",
-            "link": "https://www.facebook.com/luz.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "謝子芯 LeNa",
-            "image": "/images/KOL/謝子芯 LeNa.webp",
-            "link": "https://www.facebook.com/lena.tge/",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "水果姐姐 Mimi",
-            "image": "/images/KOL/水果小姐姐Mimi.webp",
-            "link": "https://www.facebook.com/mimi.tge.m",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "凱哥的媽媽咪呀",
-            "image": "/images/KOL/凱哥的媽媽咪呀.webp",
-            "link": "https://www.facebook.com/nancy.tge.tw",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "跟著Rhea慢生活",
-            "image": "/images/KOL/跟著Lynn慢生活.webp",
-            "link": "https://www.facebook.com/lynn.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "木瓜米米 Debby",
-            "image": "/images/KOL/木瓜米米 Debby.webp",
-            "link": "https://www.facebook.com/debby.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "金貝貝 BayKi",
-            "image": "/images/KOL/金貝貝 BayKi.webp",
-            "link": "https://www.facebook.com/bayki.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "楊琪琪 Doris",
-            "image": "/images/KOL/楊琪琪Doris.webp",
-            "link": "https://www.facebook.com/doris.tge.kiki",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "翁子涵 Adurina",
-            "image": "/images/KOL/翁子涵.webp",
-            "link": "https://www.facebook.com/babe.weng",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "梁軒安 Eagle",
-            "image": "/images/KOL/梁軒安 Eagle-軒爺.webp",
-            "link": "https://www.facebook.com/@eagle.tge",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "王俐喬 Josephine",
-            "image": "/images/KOL/王俐喬 Josephine.webp",
-            "link": "https://www.facebook.com/Josephine.tge/",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "蕭淑慎 Kitty",
-            "image": "/images/KOL/蕭淑慎KittyHsiao.webp",
-            "link": "https://www.facebook.com/L.hsiao.shu.shen",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "糖糖 Tang Tang",
-            "image": "/images/KOL/糖糖 Tang Tang.webp",
-            "link": "https://www.facebook.com/tang.official.tge/",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "葉子 葉香吟",
-            "image": "/images/KOL/葉子 葉香吟.webp",
-            "link": "https://www.facebook.com/yi.tge.official",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "李佩娟 Phoebe",
-            "image": "/images/KOL/李佩娟Phoebe.webp",
-            "link": "https://www.facebook.com/tge.phoebe",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "蔡甜甜 Brandy",
-            "image": "/images/KOL/蔡甜甜 Brandy.webp",
-            "link": "https://www.facebook.com/brandy.tge.tw/",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "余曼曼 Amanda",
-            "image": "/images/KOL/余曼曼Amanda.webp",
-            "link": "https://www.facebook.com/tge.amanda",
-            "line": "https://line.me/R/ti/p/@159qkxoz"
-        },
-        {
-            "name": "甜心Q匠 Sweet",
-            "image": "/images/KOL/甜心Q匠.webp",
-            "link": "https://www.facebook.com/minipu.fans/",
-            "line": "https://lin.ee/jFkOyph"
-        },
-        {
-            "name": "王沁芳 Angel",
-            "image": "/images/KOL/王沁芳.webp",
-            "link": "https://www.facebook.com/an9singing/?locale=zh_TW",
-            "line": "https://lin.ee/jFkOyph"
-        },
-        {
-            "name": "品艾 Abby",
-            "image": "/images/KOL/品艾Abby.webp",
-            "link": "https://www.facebook.com/abby.hopetge",
-            "line": "https://lin.ee/jFkOyph"
-        },
-        {
-            "name": "李海莉 Hayley",
-            "image": "/images/KOL/李海莉 Hayley.webp",
-            "link": "https://www.facebook.com/hayley.tge/",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 1
         },
         {
             "name": "凡妮莎 Vanessa",
             "image": "/images/KOL/凡妮莎 Vanessa.webp",
             "link": "https://www.facebook.com/vanessa.tge/",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 2
+        },
+        {
+            "name": "李海莉 Hayley",
+            "image": "/images/KOL/李海莉 Hayley.webp",
+            "link": "https://www.facebook.com/hayley.tge/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 3
+        },
+        {
+            "name": "李佩娟 Phoebe",
+            "image": "/images/KOL/李佩娟Phoebe.webp",
+            "link": "https://www.facebook.com/tge.phoebe",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 4
+        },
+        {
+            "name": "水果姐姐 Mimi",
+            "image": "/images/KOL/水果小姐姐Mimi.webp",
+            "link": "https://www.facebook.com/mimi.tge.m",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 5
+        },
+        {
+            "name": "謝子芯 LeNa",
+            "image": "/images/KOL/謝子芯 LeNa.webp",
+            "link": "https://www.facebook.com/lena.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 6
+        },
+        {
+            "name": "董湘鈴 Lena",
+            "image": "/images/KOL/elna.webp",
+            "link": "https://www.facebook.com/Dr.bo.tge",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 7
+        },
+        {
+            "name": "陳詩縈 Sarah",
+            "image": "/images/KOL/陳詩縈.webp",
+            "link": "https://www.facebook.com/profile.php?id=61553643382380",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 8
+        },
+        {
+            "name": "星兒 Sylivia",
+            "image": "/images/KOL/星兒.webp",
+            "link": "https://www.facebook.com/sylvia.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 9
+        },
+        {
+            "name": "嚴淑明 Mandy Yan",
+            "image": "/images/KOL/嚴淑明 Mandy Yan.webp",
+            "link": "https://www.facebook.com/yanshuming",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 10
+        },
+        {
+            "name": "謝NN",
+            "image": "/images/KOL/謝NN.webp",
+            "link": "https://www.facebook.com/nn.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 11
+        },
+        {
+            "name": "鹿鹿 Luz",
+            "image": "/images/KOL/鹿鹿 Luz.webp",
+            "link": "https://www.facebook.com/luz.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 12
+        },
+        {
+            "name": "凱哥的媽媽咪呀",
+            "image": "/images/KOL/凱哥的媽媽咪呀.webp",
+            "link": "https://www.facebook.com/nancy.tge.tw",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 13
+        },
+        {
+            "name": "跟著Rhea慢生活",
+            "image": "/images/KOL/跟著Lynn慢生活.webp",
+            "link": "https://www.facebook.com/lynn.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 14
+        },
+        {
+            "name": "木瓜米米 Debby",
+            "image": "/images/KOL/木瓜米米 Debby.webp",
+            "link": "https://www.facebook.com/debby.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 15
+        },
+        {
+            "name": "金貝貝 BayKi",
+            "image": "/images/KOL/金貝貝 BayKi.webp",
+            "link": "https://www.facebook.com/bayki.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 16
+        },
+        {
+            "name": "楊琪琪 Doris",
+            "image": "/images/KOL/楊琪琪Doris.webp",
+            "link": "https://www.facebook.com/doris.tge.kiki",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 17
+        },
+        {
+            "name": "翁子涵 Adurina",
+            "image": "/images/KOL/翁子涵.webp",
+            "link": "https://www.facebook.com/babe.weng",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 18
+        },
+        {
+            "name": "梁軒安 Eagle",
+            "image": "/images/KOL/梁軒安 Eagle-軒爺.webp",
+            "link": "https://www.facebook.com/@eagle.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 19
+        },
+        {
+            "name": "王俐喬 Josephine",
+            "image": "/images/KOL/王俐喬 Josephine.webp",
+            "link": "https://www.facebook.com/Josephine.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 20
+        },
+        {
+            "name": "蕭淑慎 Kitty",
+            "image": "/images/KOL/蕭淑慎KittyHsiao.webp",
+            "link": "https://www.facebook.com/L.hsiao.shu.shen",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 21
+        },
+        {
+            "name": "糖糖 Tang Tang",
+            "image": "/images/KOL/糖糖 Tang Tang.webp",
+            "link": "https://www.facebook.com/tang.official.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 22
+        },
+        {
+            "name": "葉子 葉香吟",
+            "image": "/images/KOL/葉子 葉香吟.webp",
+            "link": "https://www.facebook.com/yi.tge.official",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 23
+        },
+        {
+            "name": "蔡甜甜 Brandy",
+            "image": "/images/KOL/蔡甜甜 Brandy.webp",
+            "link": "https://www.facebook.com/brandy.tge.tw/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 24
+        },
+        {
+            "name": "余曼曼 Amanda",
+            "image": "/images/KOL/余曼曼Amanda.webp",
+            "link": "https://www.facebook.com/tge.amanda",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 25
+        },
+        {
+            "name": "甜心Q匠 Sweet",
+            "image": "/images/KOL/甜心Q匠.webp",
+            "link": "https://www.facebook.com/minipu.fans/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 26
+        },
+        {
+            "name": "王沁芳 Angel",
+            "image": "/images/KOL/王沁芳.webp",
+            "link": "https://www.facebook.com/an9singing/?locale=zh_TW",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 27
+        },
+        {
+            "name": "品艾 Abby",
+            "image": "/images/KOL/品艾Abby.webp",
+            "link": "https://www.facebook.com/abby.hopetge",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 28
         },
         {
             "name": "薩琳 Serene",
             "image": "/images/KOL/Serene - 薩琳 -.webp",
             "link": "https://www.facebook.com/i.serene",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 29
         },
         {
             "name": "簡湘穎 Emma",
             "image": "/images/KOL/簡湘穎 Emma.webp",
             "link": "https://www.facebook.com/emma.tooya.tge/",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 30
         },
         {
             "name": "黃菲菲 Amber",
             "image": "/images/KOL/Amber H .webp",
             "link": "https://www.facebook.com/amber.tge/",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 31
         },
         {
             "name": "瑋哥 Wego",
             "image": "/images/KOL/瑋哥的故事.webp",
             "link": "https://www.facebook.com/mcrapgood",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 32
         },
         {
             "name": "E小姐不購物會憂鬱",
             "image": "/images/KOL/Elena小姐不購物會憂鬱.webp",
             "link": "https://www.facebook.com/elena.tge.e/",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 33
         },
         {
             "name": "王破崙 Kiki",
             "image": "/images/KOL/王破崙 Kiki.webp",
             "link": "https://www.facebook.com/kiki.tge",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 34
         },
         {
             "name": "琳娜 R-tina",
             "image": "/images/KOL/琳娜 R-tina.webp",
             "link": "https://www.facebook.com/Nana.Family.love.Fs",
-            "line": "https://lin.ee/jFkOyph"
+            "line": "https://lin.ee/jFkOyph",
+            "order": 35
         }
     ],
     "ventures": [
@@ -319,7 +379,7 @@
             "subtitle": "老屋翻新\n商業空間",
             "link": "https://www.facebook.com/Tge.tw",
             "iconName": "Home",
-            "image": "/images/ventures_design.png",
+            "image": "/images/ventures_design2.jpg",
             "description": "打造理想空間",
             "bg": "from-orange-500 to-amber-500"
         },
@@ -344,5 +404,18 @@
         "design": {
             "link": "https://www.facebook.com/tge.tiptop.genius/"
         }
-    }
+    },
+    "mediaBadges": "/images/news_media_badges.jpg",
+    "news": [
+        {
+            "title": "AI 成為產業標配 內容如何變成收入 雄鷹廣告解構變現關鍵路徑",
+            "link": "https://tw.news.yahoo.com/share/f03a448c-82c4-3207-ab92-2a049ee4a115",
+            "source": "Yahoo 新聞"
+        },
+        {
+            "title": "AI 成為產業標配 內容如何變成收入 雄鷹廣告解構變現關鍵路徑",
+            "link": "https://liff.line.me/1454987169-1WAXAP3K/v3/article/9mLj2pE?utm_source=copyshare",
+            "source": "LINE TODAY"
+        }
+    ]
 }
