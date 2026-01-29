@@ -185,9 +185,9 @@ function App() {
           ))}
         </div>
 
-        {/* News Flash Section - Horizontal Scrolling Carousel */}
+        {/* News Flash Section - Paginated Carousel (2 items per page) */}
         <div className="mb-20 w-full px-4">
-          <div className="flex flex-col items-center gap-8 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center gap-8 max-w-6xl mx-auto">
             <div className="text-center space-y-2">
               <div className="flex items-center justify-center gap-3 text-amber-500/80 font-bold tracking-[0.4em] text-[10px]">
                 <span className="w-6 h-px bg-amber-500/30"></span>
@@ -200,31 +200,62 @@ function App() {
               <p className="text-xs text-zinc-500 mt-2">← 左右滑動查看更多 →</p>
             </div>
 
-            {/* Horizontal Scrolling Container */}
-            <div className="w-full overflow-x-auto scrollbar-hide">
-              <div className="flex gap-4 pb-4 min-w-max">
-                {news && news.map((item: any, i: number) => (
-                  <a
-                    key={i}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative p-5 bg-zinc-950/40 backdrop-blur-md border border-zinc-900 rounded-2xl hover:border-amber-500/20 transition-all duration-500 flex flex-col justify-between w-[280px] md:w-[320px] flex-shrink-0"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                    <div className="relative z-10">
-                      <div className="text-[9px] text-amber-500/70 font-bold tracking-[0.15em] uppercase mb-2 px-2 py-0.5 border border-amber-500/10 rounded-full inline-block bg-amber-500/5">
-                        {item.source}
-                      </div>
-                      <h3 className="text-sm font-bold leading-tight group-hover:text-amber-100 transition-colors tracking-tight line-clamp-3">
-                        {item.title}
-                      </h3>
+            {/* Paginated Scrolling Container */}
+            <div className="w-full overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+              <div className="flex gap-4">
+                {news && (() => {
+                  // 將新聞分組，每頁2個
+                  const pages = [];
+                  for (let i = 0; i < news.length; i += 2) {
+                    pages.push(news.slice(i, i + 2));
+                  }
+
+                  return pages.map((pageNews, pageIndex) => (
+                    <div
+                      key={pageIndex}
+                      className="flex-shrink-0 w-full snap-center grid grid-cols-2 gap-3 md:gap-6"
+                    >
+                      {pageNews.map((item: any, i: number) => (
+                        <a
+                          key={i}
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative flex flex-col bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300"
+                        >
+                          {/* Image Section */}
+                          <div className="aspect-[4/3] w-full overflow-hidden relative">
+                            <img
+                              src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
+                              alt={item.title}
+                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                          </div>
+
+                          {/* Content Section */}
+                          <div className="p-3 md:p-5 flex flex-col flex-grow relative">
+                            <div className="mb-2">
+                              <span className="text-[9px] md:text-[10px] text-amber-500/90 font-bold tracking-wider uppercase px-2 py-0.5 border border-amber-500/20 rounded-full bg-amber-500/5">
+                                {item.source}
+                              </span>
+                            </div>
+
+                            <h3 className="text-sm md:text-lg font-bold leading-snug text-gray-100 group-hover:text-amber-400 transition-colors line-clamp-3 md:line-clamp-2">
+                              {item.title}
+                            </h3>
+
+                            <div className="mt-auto pt-3 flex items-center justify-end">
+                              <span className="text-[9px] md:text-xs text-zinc-500 group-hover:text-amber-500/80 transition-colors flex items-center gap-1">
+                                READ MORE <span className="transition-transform group-hover:translate-x-1">→</span>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
                     </div>
-                    <div className="mt-4 flex items-center gap-2 text-[9px] text-zinc-600 font-bold tracking-widest group-hover:text-amber-400/80 transition-all">
-                      VIEW COVERAGE <span className="text-sm leading-none translate-x-0 group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                  </a>
-                ))}
+                  ));
+                })()}
               </div>
             </div>
 
