@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Instagram, Facebook, Volume2, VolumeX } from 'lucide-react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges } from './data/content';
+import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges, extremeMediaLogo } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -285,11 +285,16 @@ function App() {
               </div>
             </div>
 
-            <div className="w-full pt-8 border-t border-zinc-900/40">
+            <div className="w-full pt-8 border-t border-zinc-900/40 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+              <img
+                src={extremeMediaLogo}
+                alt="Extreme Media"
+                className="h-14 md:h-20 opacity-40 hover:opacity-100 transition-all duration-1000 grayscale hover:grayscale-0 shadow-2xl rounded-lg"
+              />
               <img
                 src={mediaBadges}
                 alt="Media Partners"
-                className="w-full max-w-md mx-auto opacity-30 hover:opacity-60 transition-all duration-1000 grayscale hover:grayscale-0 contrast-125"
+                className="w-full max-w-md opacity-30 hover:opacity-60 transition-all duration-1000 grayscale hover:grayscale-0 contrast-125"
               />
             </div>
           </div>

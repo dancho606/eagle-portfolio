@@ -61,4 +61,5 @@ export const ventures: VentureItem[] = configData.ventures.map(item => ({
 export const portfolio = configData.portfolio;
 export const news = configData.news;
 export const mediaBadges = configData.mediaBadges;
+export const extremeMediaLogo = (configData as any).extremeMediaLogo;
 export const heroVideoId = (configData as any).heroVideoId;

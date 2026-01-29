@@ -2,7 +2,7 @@
     "heroVideoId": "DnfWhkZ4oks",
     "services": [
         {
-            "title": "政治人物\n首先操盤\n專業團隊",
+            "title": "政治人物\n首選操盤\n專業團隊",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Users",
             "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=800",
@@ -421,6 +421,7 @@
         }
     },
     "mediaBadges": "/images/news_media_badges.jpg",
+    "extremeMediaLogo": "/images/extreme_media_logo.png",
     "news": [
         {
             "title": "AI 成為產業標配 內容如何變成收入 雄鷹廣告解構變現關鍵路徑",
