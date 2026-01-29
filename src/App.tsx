@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Instagram, Facebook } from 'lucide-react';
-import ReactPlayer from 'react-player';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, news, mediaBadges, heroVideoId } from './data/content';
+import { services, kols, ventures, caseMatch, news, mediaBadges } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'ventures';
 
@@ -86,14 +85,17 @@ function App() {
                     <div className="absolute inset-0 border-[4px] border-zinc-900/50 rounded-[1.8rem] pointer-events-none z-10"></div>
                     <div className="absolute inset-0 border border-amber-500/10 rounded-[1.8rem] pointer-events-none z-10"></div>
 
-                    <div className="w-full h-full">
-                      <ReactPlayer
-                        src={`https://www.youtube.com/watch?v=${heroVideoId}`}
-                        controls={true}
-                        width="100%"
-                        height="100%"
-                      />
-                    </div>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover"
+                      poster="/images/hero_new.jpg"
+                    >
+                      <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
+                      您的瀏覽器不支援影片播放。
+                    </video>
                   </div>
                 </div>
 
@@ -102,7 +104,7 @@ function App() {
                     href="https://www.instagram.com/hsuan.ya_official"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-purple-600/20 bg-purple-600/5 hover:bg-purple-600/10 rounded-lg transition-colors duration-300 group"
+                    className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-purple-600/20 bg-purple-600/5 hover:bg-purple-600/10 rounded-lg transition-colors duration-300 group"
                   >
                     <Instagram className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
                     <span className="text-purple-400 font-bold tracking-widest text-[10px] sm:text-sm">INSTAGRAM</span>
@@ -111,15 +113,22 @@ function App() {
                     href="https://www.facebook.com/tge.tiptop.genius/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-blue-600/20 bg-blue-600/5 hover:bg-blue-600/10 rounded-lg transition-colors duration-300 group"
+                    className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-blue-600/20 bg-blue-600/5 hover:bg-blue-600/10 rounded-lg transition-colors duration-300 group"
                   >
                     <Facebook className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
                     <span className="text-blue-400 font-bold tracking-widest text-[10px] sm:text-sm">FACEBOOK</span>
                   </a>
-                  <div className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-amber-600/20 bg-amber-600/5 rounded-lg">
-                    <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                    <span className="text-amber-400 font-bold tracking-widest text-[10px] sm:text-sm">@TIP.TOP.TGE</span>
-                  </div>
+                  <a
+                    href="https://lin.ee/jFkOyph"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-green-600/20 bg-green-600/5 hover:bg-green-600/10 rounded-lg transition-colors duration-300 group"
+                  >
+                    <svg className="w-4 h-4 text-green-400 group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.373 0 0 4.9 0 10.946c0 5.464 4.35 10.04 10.297 10.835.402.086 1.15.228 1.15.228s.229 1.402.136 2.06c0 0-.107.656-.07.8.036.143.207.243.607-.036 3.65-2.535 7.42-7.143 7.42-7.143 2.65-1.442 4.41-3.957 4.41-6.744C24 4.9 18.627 0 12 0zm-5.18 10.222c0 .243-.197.44-.44.44H4.333c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.047c.243 0 .44.197.44.44v2.666zm3.553 0c0 .243-.197.44-.44.44H7.886c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v2.666zm3.996 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v1.78h.862c-.002.3-.002.593-.002.886zm5.176 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.19c.243 0 .44.197.44.44v.667h-1.305v.333h1.305v.667h-1.305v.333h1.305v.667z" />
+                    </svg>
+                    <span className="text-green-400 font-bold tracking-widest text-[10px] sm:text-sm">LINE</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -176,9 +185,9 @@ function App() {
           ))}
         </div>
 
-        {/* News Flash Section - Compact (Approx 1/3 scale) */}
-        <div className="mb-20 max-w-2xl mx-auto px-4">
-          <div className="flex flex-col items-center gap-8">
+        {/* News Flash Section - Horizontal Scrolling Carousel */}
+        <div className="mb-20 w-full px-4">
+          <div className="flex flex-col items-center gap-8 max-w-7xl mx-auto">
             <div className="text-center space-y-2">
               <div className="flex items-center justify-center gap-3 text-amber-500/80 font-bold tracking-[0.4em] text-[10px]">
                 <span className="w-6 h-px bg-amber-500/30"></span>
@@ -188,31 +197,35 @@ function App() {
               <h2 className="text-xl md:text-2xl font-bold tracking-tighter" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 新聞快訊
               </h2>
+              <p className="text-xs text-zinc-500 mt-2">← 左右滑動查看更多 →</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-              {news && news.map((item: any, i: number) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative p-5 bg-zinc-950/40 backdrop-blur-md border border-zinc-900 rounded-2xl hover:border-amber-500/20 transition-all duration-500 flex flex-col justify-between"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative z-10">
-                    <div className="text-[9px] text-amber-500/70 font-bold tracking-[0.15em] uppercase mb-2 px-2 py-0.5 border border-amber-500/10 rounded-full inline-block bg-amber-500/5">
-                      {item.source}
+            {/* Horizontal Scrolling Container */}
+            <div className="w-full overflow-x-auto scrollbar-hide">
+              <div className="flex gap-4 pb-4 min-w-max">
+                {news && news.map((item: any, i: number) => (
+                  <a
+                    key={i}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-5 bg-zinc-950/40 backdrop-blur-md border border-zinc-900 rounded-2xl hover:border-amber-500/20 transition-all duration-500 flex flex-col justify-between w-[280px] md:w-[320px] flex-shrink-0"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="relative z-10">
+                      <div className="text-[9px] text-amber-500/70 font-bold tracking-[0.15em] uppercase mb-2 px-2 py-0.5 border border-amber-500/10 rounded-full inline-block bg-amber-500/5">
+                        {item.source}
+                      </div>
+                      <h3 className="text-sm font-bold leading-tight group-hover:text-amber-100 transition-colors tracking-tight line-clamp-3">
+                        {item.title}
+                      </h3>
                     </div>
-                    <h3 className="text-sm font-bold leading-tight group-hover:text-amber-100 transition-colors tracking-tight">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div className="mt-4 flex items-center gap-2 text-[9px] text-zinc-600 font-bold tracking-widest group-hover:text-amber-400/80 transition-all">
-                    VIEW COVERAGE <span className="text-sm leading-none translate-x-0 group-hover:translate-x-1 transition-transform">→</span>
-                  </div>
-                </a>
-              ))}
+                    <div className="mt-4 flex items-center gap-2 text-[9px] text-zinc-600 font-bold tracking-widest group-hover:text-amber-400/80 transition-all">
+                      VIEW COVERAGE <span className="text-sm leading-none translate-x-0 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="w-full pt-8 border-t border-zinc-900/40">
@@ -244,38 +257,35 @@ function App() {
                 href="https://lin.ee/jFkOyph"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <svg className="relative w-8 h-8 flex-shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.373 0 0 4.9 0 10.946c0 5.464 4.35 10.04 10.297 10.835.402.086 1.15.228 1.15.228s.229 1.402.136 2.06c0 0-.107.656-.07.8.036.143.207.243.607-.036 3.65-2.535 7.42-7.143 7.42-7.143 2.65-1.442 4.41-3.957 4.41-6.744C24 4.9 18.627 0 12 0zm-5.18 10.222c0 .243-.197.44-.44.44H4.333c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.047c.243 0 .44.197.44.44v2.666zm3.553 0c0 .243-.197.44-.44.44H7.886c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v2.666zm3.996 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v1.78h.862c-.002.3-.002.593-.002.886zm5.176 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.19c.243 0 .44.197.44.44v.667h-1.305v.333h1.305v.667h-1.305v.333h1.305v.667z" />
                 </svg>
                 <span className="relative whitespace-nowrap">LINE</span>
-                <span className="relative text-2xl">→</span>
               </a>
 
               <a
                 href="https://www.instagram.com/hsuan.ya_official"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <Instagram className="relative w-8 h-8 flex-shrink-0 text-white" />
                 <span className="relative whitespace-nowrap">Instagram</span>
-                <span className="relative text-2xl">→</span>
               </a>
 
               <a
                 href="https://www.facebook.com/tge.tiptop.genius/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <Facebook className="relative w-8 h-8 flex-shrink-0 text-white" />
                 <span className="relative whitespace-nowrap">Facebook</span>
-                <span className="relative text-2xl">→</span>
               </a>
             </div>
           </div>
@@ -293,6 +303,22 @@ function App() {
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;  /* Chrome, Safari and Opera */
+        }
+        
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </div>
