@@ -2,6 +2,14 @@
     "heroVideoId": "DnfWhkZ4oks",
     "services": [
         {
+            "title": "政治人物\n首先操盤\n專業團隊",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Users",
+            "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=800",
+            "description": "專業政治選戰行銷團隊",
+            "color": "text-white"
+        },
+        {
             "title": "機器人販售\nRobot Sales",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Bot",
@@ -88,14 +96,6 @@
             "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
             "description": "專業簡報設計服務",
             "color": "text-indigo-400"
-        },
-        {
-            "title": "部落客\n其他百位網紅",
-            "link": "https://line.me/R/ti/p/@159qkxoz",
-            "iconName": "Users",
-            "image": "/images/blogger_kol.png",
-            "description": "專業部落客與網紅合作媒合",
-            "color": "text-teal-400"
         }
     ],
     "caseMatch": [
@@ -361,6 +361,13 @@
             "link": "https://www.facebook.com/Nana.Family.love.Fs",
             "line": "https://lin.ee/jFkOyph",
             "order": 35
+        },
+        {
+            "name": "部落客\n其他百位網紅",
+            "image": "/images/blogger_kol.png",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 36
         }
     ],
     "ventures": [
@@ -449,7 +456,7 @@
             "title": "翁子涵｜低調奢華的時尚魅力 來自雄鷹集團執行長梁軒安的「造浪」",
             "link": "https://www.storm.mg/article/4965334",
             "source": "風傳媒",
-            "image": "https://images.storm.mg/cloud/7e78c0365f30e8a3f6cd5a88638241713a6aa17c.jpg?resize=fill&w=1200&format=jpg"
+            "image": "https://images.storm.mg/cloud/7e78c0365f30e8a3f6cd5a88638241713a6aa17c.jpg?url=s3%3A%2F%2Fnew-storm-public-resource%2Fgallery%2F1610855%2F20231227-105031_U24247_M920299_fa39.jpg&g=sm&h=675&resize=fill&w=1200&format=jpg"
         },
         {
             "title": "慎重登場 愛意不減｜梁軒安與蕭淑慎攜手八週年 十貓作伴幸福滿屋",
@@ -461,7 +468,7 @@
             "title": "雄鷹娛樂文創執行長梁軒安宣布要幹大事？首波台語新人余曼曼《慢慢等待你》",
             "link": "https://www.hitoradio.com/mobile/hitonews_inner.php?news_id=80570",
             "source": "Hito Radio",
-            "image": "https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=800"
+            "image": "https://www.hitoradio.com/media/news/big/c9eda9f9b82f.jpg"
         },
         {
             "title": "百萬直播主「封奶」轉戰歌壇！背後大咖金主曝光　放話當下個江蕙",
@@ -479,13 +486,31 @@
             "title": "旅行兼追星，梁軒安、蕭淑慎夫妻聯手打造旅遊新文化",
             "link": "https://www.chinatimes.com/realtimenews/20180413000041-260507",
             "source": "中時新聞網",
-            "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800"
+            "image": "https://images.chinatimes.com/newsphoto/2018-04-13/1024/20180413000042.jpg"
         },
         {
             "title": "年紀輕輕就財富自由的女企業家－謝子芯，在雄鷹娛樂文創事業找到人生第二象限",
             "link": "https://tw.news.yahoo.com/",
             "source": "Yahoo 新聞",
             "image": "https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png"
+        }
+    ],
+    "partners": [
+        {
+            "title": "合作客戶 1",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800",
+            "description": "合作客戶案例展示"
+        }
+    ],
+    "recommendations": [
+        {
+            "title": "媒體推薦 1",
+            "link": "#",
+            "iconName": "Tv",
+            "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=800",
+            "description": "媒體推薦報導展示"
         }
     ]
 }

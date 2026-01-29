@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram, Facebook, Volume2, VolumeX } from 'lucide-react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, news, mediaBadges } from './data/content';
+import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges } from './data/content';
 
-type Tab = 'services' | 'kols' | 'caseMatch' | 'ventures';
+type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('services');
+  const [isMuted, setIsMuted] = useState(true);
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -87,7 +88,7 @@ function App() {
 
                     <video
                       autoPlay
-                      muted
+                      muted={isMuted}
                       loop
                       playsInline
                       className="w-full h-full object-cover"
@@ -96,6 +97,19 @@ function App() {
                       <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
                       您的瀏覽器不支援影片播放。
                     </video>
+
+                    {/* Mute/Unmute Toggle Button */}
+                    <button
+                      onClick={() => setIsMuted(!isMuted)}
+                      className="absolute bottom-6 right-6 z-20 p-3 bg-black/40 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 group/mute"
+                      title={isMuted ? "取消靜音" : "靜音"}
+                    >
+                      {isMuted ? (
+                        <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover/mute:scale-110 transition-transform" />
+                      ) : (
+                        <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-amber-500 group-hover/mute:scale-110 transition-transform shadow-[0_0_15px_rgba(245,158,11,0.5)]" />
+                      )}
+                    </button>
                   </div>
                 </div>
 
@@ -136,19 +150,21 @@ function App() {
         </div>
 
         {/* Tab Selection */}
-        <div className="mb-16">
+        <div className="mb-16 px-2 sm:px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-2 bg-zinc-950 border border-zinc-800 p-1.5 rounded-xl">
+            <div className="grid grid-cols-3 lg:grid-cols-6 gap-1.5 md:gap-2 bg-zinc-950 border border-zinc-800 p-1.5 md:p-2 rounded-2xl">
               {[
                 { id: 'services' as Tab, label: '專業服務' },
                 { id: 'kols' as Tab, label: 'KOL陣容' },
                 { id: 'caseMatch' as Tab, label: '案件媒合' },
+                { id: 'partners' as Tab, label: '合作客戶' },
+                { id: 'recommendations' as Tab, label: '媒體推薦' },
                 { id: 'ventures' as Tab, label: '關係企業' }
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`group relative min-w-[120px] flex-1 py-4 px-4 font-bold text-base transition-all duration-300 overflow-hidden whitespace-nowrap rounded-lg ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
+                  className={`group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
                     }`}
                 >
                   {activeTab === tab.id && (
@@ -174,6 +190,16 @@ function App() {
             </div>
           ))}
           {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+            </div>
+          ))}
+          {activeTab === 'partners' && partners.map((item, i) => (
+            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+            </div>
+          ))}
+          {activeTab === 'recommendations' && recommendations.map((item, i) => (
             <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
               <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
             </div>
@@ -228,7 +254,7 @@ function App() {
                             <img
                               src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
                               alt={item.title}
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                           </div>

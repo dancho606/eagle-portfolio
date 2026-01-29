@@ -41,6 +41,16 @@ export const caseMatch: ServiceItem[] = configData.caseMatch.map(item => ({
     icon: iconMap[item.iconName] || Handshake
 }));
 
+export const partners: ServiceItem[] = (configData as any).partners.map((item: any) => ({
+    ...item,
+    icon: iconMap[item.iconName] || Handshake
+}));
+
+export const recommendations: ServiceItem[] = (configData as any).recommendations.map((item: any) => ({
+    ...item,
+    icon: iconMap[item.iconName] || Tv
+}));
+
 export const kols = [...configData.kols].sort((a, b) => (a.order || 999) - (b.order || 999));
 
 export const ventures: VentureItem[] = configData.ventures.map(item => ({

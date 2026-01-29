@@ -45,7 +45,7 @@ export function GridCard({ title, subtitle, href = "#", image, lineLink }: GridC
 
                     {/* Title */}
                     <h3
-                        className="text-lg md:text-xl font-bold text-white mb-2 leading-snug tracking-tight drop-shadow-md whitespace-pre-wrap break-keep"
+                        className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 leading-tight tracking-tight drop-shadow-md whitespace-pre-wrap break-words line-clamp-3"
                         style={{ fontFamily: "'Noto Sans TC', sans-serif" }}
                     >
                         {title}
