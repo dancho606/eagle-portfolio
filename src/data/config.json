@@ -498,11 +498,123 @@
     ],
     "partners": [
         {
-            "title": "合作客戶 1",
+            "title": "",
             "link": "#",
             "iconName": "Handshake",
-            "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800",
-            "description": "合作客戶案例展示"
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_1.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_2.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_3.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_4.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_5.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_6.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_7.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_8.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_9.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_10.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_11.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_12.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_13.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_14.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_15.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_16.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_17.jpg",
+            "description": ""
         }
     ],
     "recommendations": [
