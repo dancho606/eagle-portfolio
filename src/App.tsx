@@ -142,6 +142,25 @@ function App() {
                     <span className="text-green-400 font-bold tracking-widest text-[10px] sm:text-sm">LINE</span>
                   </a>
                 </div>
+
+                {/* Collaboration Buttons (New) */}
+                <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 px-4 w-full">
+                  {[
+                    { text: '我想要互惠', color: 'from-emerald-600 to-green-600' },
+                    { text: '產品換資源', color: 'from-green-600 to-teal-600' },
+                    { text: '我想要投資', color: 'from-teal-600 to-emerald-600' }
+                  ].map((btn, idx) => (
+                    <a
+                      key={idx}
+                      href="https://lin.ee/jFkOyph"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full md:w-auto min-w-[140px] px-6 py-3 bg-gradient-to-r ${btn.color} hover:brightness-110 text-white font-bold text-sm tracking-widest rounded-full transition-all duration-300 shadow-lg shadow-green-900/20 text-center scale-95 hover:scale-100`}
+                    >
+                      {btn.text}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
