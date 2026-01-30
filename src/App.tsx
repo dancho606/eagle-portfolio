@@ -171,10 +171,8 @@ function App() {
                   <span className="relative z-10">{tab.label}</span>
                 </button>
               ))}
-            </div>
 
-            {/* Link Buttons Row (Below Tabs) */}
-            <div className="mt-2 grid grid-cols-3 gap-1.5 md:gap-2 bg-zinc-950 border border-zinc-800 p-1.5 md:p-2 rounded-2xl">
+              {/* Link Buttons (Integrated inside the same container) */}
               {[
                 { label: '我想要互惠', href: 'https://lin.ee/jFkOyph' },
                 { label: '產品換資源', href: 'https://lin.ee/jFkOyph' },
@@ -185,9 +183,9 @@ function App() {
                   href={btn.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-400 hover:text-green-400 hover:bg-zinc-900 border border-transparent hover:border-green-500/20"
+                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-400 hover:text-green-400 hover:bg-zinc-900 border border-transparent hover:border-green-500/20 col-span-1 lg:col-span-2"
                 >
-                  <span className="relative z-10">{btn.label}</span>
+                  <span className="relative z-10 text-green-500/80 group-hover:text-green-400 font-bold">{btn.label}</span>
                 </a>
               ))}
             </div>
