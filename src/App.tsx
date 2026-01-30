@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Instagram, Facebook, Volume2, VolumeX } from 'lucide-react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges, extremeMediaLogo, heroVideoId } from './data/content';
+import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -197,9 +197,9 @@ function App() {
               <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
             </div>
           ))}
-          {activeTab === 'recommendations' && recommendations.map((item, i) => (
+          {activeTab === 'recommendations' && news.map((item, i) => (
             <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+              <GridCard title={item.title} subtitle={item.source} href={item.link} image={item.image} />
             </div>
           ))}
           {activeTab === 'ventures' && ventures.map((item, i) => (
@@ -346,6 +346,17 @@ function App() {
                 <span className="relative whitespace-nowrap">Facebook</span>
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Partner Logos Showcase (Combined Image) */}
+        <div className="mt-16 mb-8 max-w-5xl mx-auto px-6">
+          <div className="grayscale opacity-40 hover:opacity-80 transition-all duration-700 flex justify-center">
+            <img
+              src="/images/partners_combined.png"
+              alt="Our Partners"
+              className="max-w-full h-auto brightness-150 contrast-125"
+            />
           </div>
         </div>
       </div>

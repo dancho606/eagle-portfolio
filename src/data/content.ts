@@ -46,11 +46,6 @@ export const partners: ServiceItem[] = (configData as any).partners.map((item: a
     icon: iconMap[item.iconName] || Handshake
 }));
 
-export const recommendations: ServiceItem[] = (configData as any).recommendations.map((item: any) => ({
-    ...item,
-    icon: iconMap[item.iconName] || Tv
-}));
-
 export const kols = [...configData.kols].sort((a, b) => (a.order || 999) - (b.order || 999));
 
 export const ventures: VentureItem[] = configData.ventures.map(item => ({
@@ -62,4 +57,3 @@ export const portfolio = configData.portfolio;
 export const news = configData.news;
 export const mediaBadges = configData.mediaBadges;
 export const extremeMediaLogo = (configData as any).extremeMediaLogo;
-export const heroVideoId = (configData as any).heroVideoId;
