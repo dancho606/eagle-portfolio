@@ -183,9 +183,9 @@ function App() {
                   href={btn.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-400 hover:text-green-400 hover:bg-zinc-900 border border-transparent hover:border-green-500/20 col-span-1 lg:col-span-2"
+                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent col-span-1 lg:col-span-2"
                 >
-                  <span className="relative z-10 text-green-500/80 group-hover:text-green-400 font-bold">{btn.label}</span>
+                  <span className="relative z-10">{btn.label}</span>
                 </a>
               ))}
             </div>
