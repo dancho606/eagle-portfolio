@@ -363,11 +363,18 @@
             "order": 35
         },
         {
+            "name": "余曼曼\nYuManMan",
+            "image": "https://attach.setn.com/newsimages/2023/06/19/4208076-PH.jpg",
+            "link": "https://www.facebook.com/yumanman02/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 36
+        },
+        {
             "name": "部落客\n其他百位網紅",
             "image": "/images/blogger_kol.png",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "line": "https://lin.ee/jFkOyph",
-            "order": 36
+            "order": 37
         }
     ],
     "ventures": [
