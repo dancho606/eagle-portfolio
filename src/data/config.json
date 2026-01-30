@@ -376,7 +376,7 @@
             "subtitle": "全台唯一明星旅遊專賣店",
             "link": "https://www.facebook.com/hope.tour.tge",
             "iconName": "Plane",
-            "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/關係企業/旅遊.jpg",
             "description": "提供明星級旅遊體驗",
             "bg": "from-blue-500 to-cyan-500"
         },
@@ -385,7 +385,7 @@
             "subtitle": "高爾夫球教學\n球具買賣",
             "link": "https://line.me/R/ti/p/@226mteho?ts=02022237&oat_content=url",
             "iconName": "Trophy",
-            "image": "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/關係企業/高爾夫.jpg",
             "description": "專業高爾夫球訓練",
             "bg": "from-green-500 to-emerald-500"
         },
@@ -394,7 +394,7 @@
             "subtitle": "老屋翻新\n商業空間",
             "link": "https://www.facebook.com/Tge.tw",
             "iconName": "Home",
-            "image": "/images/ventures_design2.jpg",
+            "image": "/images/關係企業/ventures_design2.jpg",
             "description": "打造理想空間",
             "bg": "from-orange-500 to-amber-500"
         },
@@ -403,7 +403,7 @@
             "subtitle": "蝦皮賣場\n聯名合作",
             "link": "https://shopee.tw/tge.shop.tw",
             "iconName": "ShoppingBag",
-            "image": "/images/ventures_ecommerce.png",
+            "image": "/images/關係企業/宅經濟.jpg",
             "description": "電商平台經營",
             "bg": "from-purple-500 to-pink-500"
         }
