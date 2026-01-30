@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Instagram, Facebook, Volume2, VolumeX } from 'lucide-react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges, extremeMediaLogo } from './data/content';
+import { services, kols, ventures, caseMatch, partners, recommendations, news, mediaBadges, extremeMediaLogo, heroVideoId } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -22,18 +22,35 @@ function App() {
 
             {/* Top: Signature Visual Poster (Wide banner) */}
             <div className="w-full max-w-5xl mx-auto px-4">
-              <div className="relative aspect-[21/9] md:aspect-[3/1] lg:aspect-[21/7] overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-zinc-800 shadow-3xl group">
-                <img
-                  src="/images/hero_new.jpg"
-                  alt="TGE Hero Banner"
+              <div className="relative aspect-video overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-zinc-800 shadow-3xl group">
+                <video
+                  autoPlay
+                  muted={isMuted}
+                  loop
+                  playsInline
                   className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                />
+                  poster="/images/hero_new.jpg"
+                >
+                  <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+
+                {/* Video Controls */}
+                <button
+                  onClick={() => setIsMuted(!isMuted)}
+                  className="absolute bottom-6 left-6 z-20 p-3 bg-black/50 backdrop-blur-md rounded-full border border-white/10 hover:bg-black/70 transition-all duration-300 group/btn"
+                >
+                  {isMuted ? (
+                    <VolumeX className="w-5 h-5 text-white/70 group-hover/btn:text-white transition-colors" />
+                  ) : (
+                    <Volume2 className="w-5 h-5 text-amber-500 group-hover/btn:text-amber-400 transition-colors" />
+                  )}
+                </button>
 
                 {/* Visual Label */}
                 <div className="absolute bottom-6 md:bottom-10 right-6 md:right-10 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="text-[10px] tracking-[0.3em] text-amber-500 font-bold">2026 OFFICIAL BANNER</div>
-                  <div className="text-xl md:text-2xl font-bold tracking-tighter mt-1 italic">雄鷹娛樂文創</div>
+                  <div className="text-[10px] tracking-[0.3em] text-amber-500 font-bold">2026 OFFICIAL SHOWREEL</div>
+                  <div className="text-xl md:text-2xl font-bold tracking-tighter mt-1 italic">形象影片</div>
                 </div>
               </div>
             </div>
@@ -79,37 +96,20 @@ function App() {
                   </div>
                 </div>
 
-                {/* YouTube Visual Player (Relocated below quote) */}
                 <div className="mt-16 w-full max-w-4xl mx-auto px-4">
                   <div className="relative aspect-video overflow-hidden rounded-[2rem] border-4 border-zinc-800 shadow-[0_0_50px_-12px_rgba(245,158,11,0.2)] group bg-zinc-950">
                     {/* Metallic Frame Overlay */}
                     <div className="absolute inset-0 border-[4px] border-zinc-900/50 rounded-[1.8rem] pointer-events-none z-10"></div>
                     <div className="absolute inset-0 border border-amber-500/10 rounded-[1.8rem] pointer-events-none z-10"></div>
 
-                    <video
-                      autoPlay
-                      muted={isMuted}
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover"
-                      poster="/images/hero_new.jpg"
-                    >
-                      <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
-                      您的瀏覽器不支援影片播放。
-                    </video>
-
-                    {/* Mute/Unmute Toggle Button */}
-                    <button
-                      onClick={() => setIsMuted(!isMuted)}
-                      className="absolute bottom-6 right-6 z-20 p-3 bg-black/40 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 group/mute"
-                      title={isMuted ? "取消靜音" : "靜音"}
-                    >
-                      {isMuted ? (
-                        <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover/mute:scale-110 transition-transform" />
-                      ) : (
-                        <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-amber-500 group-hover/mute:scale-110 transition-transform shadow-[0_0_15px_rgba(245,158,11,0.5)]" />
-                      )}
-                    </button>
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/tn70nnpKG_U?autoplay=1&mute=1&rel=0"
+                      title="Robot Film"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
                   </div>
                 </div>
 
@@ -138,9 +138,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-green-600/20 bg-green-600/5 hover:bg-green-600/10 rounded-lg transition-colors duration-300 group"
                   >
-                    <svg className="w-4 h-4 text-green-400 group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                      <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.373 0 0 4.9 0 10.946c0 5.464 4.35 10.04 10.297 10.835.402.086 1.15.228 1.15.228s.229 1.402.136 2.06c0 0-.107.656-.07.8.036.143.207.243.607-.036 3.65-2.535 7.42-7.143 7.42-7.143 2.65-1.442 4.41-3.957 4.41-6.744C24 4.9 18.627 0 12 0zm-5.18 10.222c0 .243-.197.44-.44.44H4.333c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.047c.243 0 .44.197.44.44v2.666zm3.553 0c0 .243-.197.44-.44.44H7.886c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v2.666zm3.996 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v1.78h.862c-.002.3-.002.593-.002.886zm5.176 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.19c.243 0 .44.197.44.44v.667h-1.305v.333h1.305v.667h-1.305v.333h1.305v.667z" />
-                    </svg>
+                    <img src="/line_logo.svg" alt="LINE" className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-green-400 font-bold tracking-widest text-[10px] sm:text-sm">LINE</span>
                   </a>
                 </div>
@@ -322,9 +320,7 @@ function App() {
                 className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <svg className="relative w-8 h-8 flex-shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.373 0 0 4.9 0 10.946c0 5.464 4.35 10.04 10.297 10.835.402.086 1.15.228 1.15.228s.229 1.402.136 2.06c0 0-.107.656-.07.8.036.143.207.243.607-.036 3.65-2.535 7.42-7.143 7.42-7.143 2.65-1.442 4.41-3.957 4.41-6.744C24 4.9 18.627 0 12 0zm-5.18 10.222c0 .243-.197.44-.44.44H4.333c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.047c.243 0 .44.197.44.44v2.666zm3.553 0c0 .243-.197.44-.44.44H7.886c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v2.666zm3.996 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h.885c.243 0 .44.197.44.44v1.78h.862c-.002.3-.002.593-.002.886zm5.176 0c0 .243-.197.44-.44.44h-2.19c-.243 0-.44-.197-.44-.44V7.556c0-.243.197-.44.44-.44h2.19c.243 0 .44.197.44.44v.667h-1.305v.333h1.305v.667h-1.305v.333h1.305v.667z" />
-                </svg>
+                <img src="/line_logo.svg" alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="relative whitespace-nowrap">LINE</span>
               </a>
 
