@@ -287,12 +287,12 @@ function App() {
               <img
                 src={extremeMediaLogo}
                 alt="Extreme Media"
-                className="h-14 md:h-20 opacity-40 hover:opacity-100 transition-all duration-1000 grayscale hover:grayscale-0 shadow-2xl rounded-lg"
+                className="h-14 md:h-20 hover:scale-105 transition-all duration-700 shadow-2xl rounded-lg"
               />
               <img
                 src={mediaBadges}
                 alt="Media Partners"
-                className="w-full max-w-md opacity-30 hover:opacity-60 transition-all duration-1000 grayscale hover:grayscale-0 contrast-125"
+                className="w-full max-w-md transition-all duration-700"
               />
             </div>
           </div>
@@ -351,11 +351,11 @@ function App() {
 
         {/* Partner Logos Showcase (Combined Image) */}
         <div className="mt-16 mb-8 max-w-5xl mx-auto px-6">
-          <div className="grayscale opacity-40 hover:opacity-80 transition-all duration-700 flex justify-center">
+          <div className="transition-all duration-700 flex justify-center">
             <img
               src="/images/partners_combined.png"
               alt="Our Partners"
-              className="max-w-full h-auto brightness-150 contrast-125"
+              className="max-w-full h-auto"
             />
           </div>
         </div>
