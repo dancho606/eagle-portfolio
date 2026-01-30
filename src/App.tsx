@@ -150,7 +150,7 @@ function App() {
         {/* Tab Selection */}
         <div className="mb-16 px-2 sm:px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 lg:grid-cols-6 gap-1.5 md:gap-2 bg-zinc-950 border border-zinc-800 p-1.5 md:p-2 rounded-2xl">
+            <div className="flex flex-wrap gap-1.5 md:gap-2 bg-zinc-950 border border-zinc-800 p-1.5 md:p-2 rounded-2xl">
               {[
                 { id: 'services' as Tab, label: '專業服務' },
                 { id: 'kols' as Tab, label: 'KOL陣容' },
@@ -162,7 +162,7 @@ function App() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
+                  className={`group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)] ${activeTab === tab.id ? 'text-black' : 'text-gray-500 hover:text-amber-400 hover:bg-zinc-900'
                     }`}
                 >
                   {activeTab === tab.id && (
@@ -183,7 +183,7 @@ function App() {
                   href={btn.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent col-span-1 lg:col-span-2"
+                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)]"
                 >
                   <span className="relative z-10">{btn.label}</span>
                 </a>
@@ -200,7 +200,7 @@ function App() {
                   href={btn.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent col-span-1 lg:col-span-2"
+                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)]"
                 >
                   <span className="relative z-10">{btn.label}</span>
                 </a>
