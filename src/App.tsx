@@ -425,10 +425,19 @@ function App() {
       </div>
 
       {/* Footer / Powered By */}
-      <footer className="w-full py-8 text-center relative z-10">
-        <p className="text-zinc-600 text-xs tracking-wider">
-          Powered by <a href="#" className="hover:text-amber-500 transition-colors duration-300">智賦AI品牌行銷-theintellibrand</a>
-        </p>
+      <footer className="w-full py-8 text-center relative z-10 border-t border-zinc-900/50 mt-12 bg-black">
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-zinc-600 text-xs tracking-wider">
+            &copy; 2026 雄鷹娛樂文創事業 Tiptop Genius Entertainment. All Rights Reserved.
+          </p>
+          <div className="flex gap-6 text-[10px] text-zinc-500">
+            <a href="#" className="hover:text-amber-500 transition-colors">隱私權政策 Privacy Policy</a>
+            <a href="#" className="hover:text-amber-500 transition-colors">使用條款 Terms of Service</a>
+          </div>
+          <p className="text-zinc-700 text-[10px] tracking-wider mt-2">
+            Powered by <a href="/intellibrand_coming_soon.html" target="_blank" className="hover:text-amber-500 transition-colors duration-300 font-bold">智賦AI品牌行銷-theintellibrand</a>
+          </p>
+        </div>
       </footer>
 
       <style>{`
