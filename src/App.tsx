@@ -305,6 +305,7 @@ function App() {
                               <img
                                 src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
                                 alt={item.title}
+                                loading="lazy"
                                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>

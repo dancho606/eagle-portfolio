@@ -24,6 +24,7 @@ export function GridCard({ title, subtitle, href = "#", image, lineLink }: GridC
                         <img
                             src={image}
                             alt={title}
+                            loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                     ) : (
