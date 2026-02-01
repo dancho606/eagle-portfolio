@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Instagram, Facebook, Volume2, VolumeX } from 'lucide-react';
+import { Instagram, Facebook, Volume2, VolumeX, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef, useState } from 'react';
 import { GridCard } from './components/GridCard';
 import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo } from './data/content';
 
@@ -8,6 +8,15 @@ type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('services');
   const [isMuted, setIsMuted] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const { current } = scrollContainerRef;
+      const scrollAmount = direction === 'left' ? -current.offsetWidth : current.offsetWidth;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -259,62 +268,82 @@ function App() {
             </div>
 
             {/* Paginated Scrolling Container */}
-            <div className="w-full overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-              <div className="flex gap-4">
-                {news && (() => {
-                  // 將新聞分組，每頁2個
-                  const pages = [];
-                  for (let i = 0; i < news.length; i += 2) {
-                    pages.push(news.slice(i, i + 2));
-                  }
+            <div className="relative w-full group/carousel">
+              {/* Left Button */}
+              <button
+                onClick={() => scroll('left')}
+                className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
+                aria-label="Previous page"
+              >
+                <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
+              </button>
 
-                  return pages.map((pageNews, pageIndex) => (
-                    <div
-                      key={pageIndex}
-                      className="flex-shrink-0 w-full snap-center grid grid-cols-2 gap-3 md:gap-6"
-                    >
-                      {pageNews.map((item: any, i: number) => (
-                        <a
-                          key={i}
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group relative flex flex-col bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300"
-                        >
-                          {/* Image Section */}
-                          <div className="aspect-[4/3] w-full overflow-hidden relative">
-                            <img
-                              src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
-                              alt={item.title}
-                              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                          </div>
+              <div ref={scrollContainerRef} className="w-full overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+                <div className="flex gap-4">
+                  {news && (() => {
+                    // 將新聞分組，每頁2個
+                    const pages = [];
+                    for (let i = 0; i < news.length; i += 2) {
+                      pages.push(news.slice(i, i + 2));
+                    }
 
-                          {/* Content Section */}
-                          <div className="p-3 md:p-5 flex flex-col flex-grow relative">
-                            <div className="mb-2">
-                              <span className="text-[9px] md:text-[10px] text-amber-500/90 font-bold tracking-wider uppercase px-2 py-0.5 border border-amber-500/20 rounded-full bg-amber-500/5">
-                                {item.source}
-                              </span>
+                    return pages.map((pageNews, pageIndex) => (
+                      <div
+                        key={pageIndex}
+                        className="flex-shrink-0 w-full snap-center grid grid-cols-2 gap-3 md:gap-6"
+                      >
+                        {pageNews.map((item: any, i: number) => (
+                          <a
+                            key={i}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative flex flex-col bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300"
+                          >
+                            {/* Image Section */}
+                            <div className="aspect-[4/3] w-full overflow-hidden relative">
+                              <img
+                                src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
+                                alt={item.title}
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                             </div>
 
-                            <h3 className="text-sm md:text-lg font-bold leading-snug text-gray-100 group-hover:text-amber-400 transition-colors line-clamp-3 md:line-clamp-2">
-                              {item.title}
-                            </h3>
+                            {/* Content Section */}
+                            <div className="p-3 md:p-5 flex flex-col flex-grow relative">
+                              <div className="mb-2">
+                                <span className="text-[9px] md:text-[10px] text-amber-500/90 font-bold tracking-wider uppercase px-2 py-0.5 border border-amber-500/20 rounded-full bg-amber-500/5">
+                                  {item.source}
+                                </span>
+                              </div>
 
-                            <div className="mt-auto pt-3 flex items-center justify-end">
-                              <span className="text-[9px] md:text-xs text-zinc-500 group-hover:text-amber-500/80 transition-colors flex items-center gap-1">
-                                READ MORE <span className="transition-transform group-hover:translate-x-1">→</span>
-                              </span>
+                              <h3 className="text-sm md:text-lg font-bold leading-snug text-gray-100 group-hover:text-amber-400 transition-colors line-clamp-3 md:line-clamp-2">
+                                {item.title}
+                              </h3>
+
+                              <div className="mt-auto pt-3 flex items-center justify-end">
+                                <span className="text-[9px] md:text-xs text-zinc-500 group-hover:text-amber-500/80 transition-colors flex items-center gap-1">
+                                  READ MORE <span className="transition-transform group-hover:translate-x-1">→</span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  ));
-                })()}
+                          </a>
+                        ))}
+                      </div>
+                    ));
+                  })()}
+                </div>
               </div>
+
+              {/* Right Button */}
+              <button
+                onClick={() => scroll('right')}
+                className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
+                aria-label="Next page"
+              >
+                <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
+              </button>
             </div>
 
             <div className="w-full pt-8 border-t border-zinc-900/40 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
