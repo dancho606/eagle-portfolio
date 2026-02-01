@@ -192,7 +192,7 @@ function App() {
               {/* Link Buttons Row 2 */}
               {[
                 { label: '機場接送', href: 'https://lin.ee/jFkOyph' },
-                { label: '保鏢隨行', href: 'https://lin.ee/jFkOyph' },
+                { label: '保鏢隨扈', href: 'https://lin.ee/jFkOyph' },
                 { label: '臨時演員', href: 'https://lin.ee/jFkOyph' }
               ].map((btn, idx) => (
                 <a
