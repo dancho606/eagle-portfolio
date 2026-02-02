@@ -59,3 +59,4 @@ export const portfolio = configData.portfolio;
 export const news = configData.news;
 export const mediaBadges = configData.mediaBadges;
 export const extremeMediaLogo = (configData as any).extremeMediaLogo;
+export const realEstate = (configData as any).realEstate;

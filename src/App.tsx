@@ -1,7 +1,7 @@
 import { Instagram, Facebook, Volume2, VolumeX, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo } from './data/content';
+import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -67,7 +67,7 @@ function App() {
             {/* Bottom: Dramatic Typography & Branding */}
             <div className="w-full text-center flex flex-col items-center">
               {/* Logo Section */}
-              <div className="mb-10 relative inline-block group">
+              <div className="mb-10 relative flex flex-col items-center group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-red-600/20 to-amber-500/10 blur-3xl group-hover:from-red-600/30 transition-all duration-700"></div>
                 <a
                   href="https://lin.ee/jFkOyph"
@@ -87,6 +87,15 @@ function App() {
                     </span>
                   </div>
                 </a>
+
+                {/* Real Estate Description */}
+                {realEstate && (
+                  <div className="mt-6 max-w-lg mx-auto px-4 animate-fade-in text-center">
+                    <p className="text-zinc-400 text-xs md:text-sm leading-relaxed tracking-wide font-medium italic">
+                      {realEstate.description}
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-4 max-w-4xl">
@@ -362,7 +371,7 @@ function App() {
               <img
                 src={extremeMediaLogo}
                 alt="Extreme Media"
-                className="h-14 md:h-20 hover:scale-105 transition-all duration-700 shadow-2xl rounded-lg"
+                className="h-14 md:h-20 hover:scale-105 transition-all duration-700 shadow-xl"
               />
               <img
                 src={mediaBadges}
