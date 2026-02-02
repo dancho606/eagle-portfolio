@@ -69,13 +69,24 @@ function App() {
               {/* Logo Section */}
               <div className="mb-10 relative inline-block group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-red-600/20 to-amber-500/10 blur-3xl group-hover:from-red-600/30 transition-all duration-700"></div>
-                <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm">
+                <a
+                  href="https://lin.ee/jFkOyph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative w-64 md:w-80 rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm cursor-pointer"
+                >
                   <img
-                    src="/images/logo_v2.webp"
-                    alt="Eagle Logo"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="/images/line_connect.jpg"
+                    alt="Connect on LINE"
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                </div>
+                  {/* Overlay hint */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-bold tracking-widest flex items-center gap-2">
+                      加入 LINE 好友 <span className="text-lg">→</span>
+                    </span>
+                  </div>
+                </a>
               </div>
 
               <div className="space-y-4 max-w-4xl">

@@ -103,6 +103,9 @@ def convert_md_to_pdf_reportlab(md_path, pdf_path):
                 story.append(Spacer(1, 12))
             
             elif line.startswith('## '):
+                # 如果不是第一個大標題，則先換頁
+                if any(isinstance(s, Table) for s in story):
+                    story.append(PageBreak())
                 text = line[3:].strip()
                 story.append(Paragraph(text, h2_style))
                 story.append(Spacer(1, 8))
@@ -127,23 +130,50 @@ def convert_md_to_pdf_reportlab(md_path, pdf_path):
                     i += 1
                 
                 if table_data:
-                    # 創建表格
-                    t = Table(table_data)
+                    # 重新處理表格數據，將文字包裝在 Paragraph 中以支援自動換行
+                    processed_table_data = []
+                    for row_idx, row in enumerate(table_data):
+                        processed_row = []
+                        for cell_idx, cell in enumerate(row):
+                            # 第一行是 Header，使用 bold 樣式
+                            cell_style = h3_style if row_idx == 0 else normal_style
+                            # 處理 Markdown 格式（粗體等）
+                            cell_text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', cell)
+                            # 處理換行符號，ReportLab 需要 <br/>
+                            cell_text = cell_text.replace('<br>', '<br/>')
+                            
+                            # 居中處理執行結果列 (cell_idx == 2 是勾勾)
+                            if cell_idx == 2:
+                                p_style = ParagraphStyle('Center', parent=cell_style, alignment=TA_CENTER)
+                                processed_row.append(Paragraph(cell_text, p_style))
+                            else:
+                                processed_row.append(Paragraph(cell_text, cell_style))
+                        processed_table_data.append(processed_row)
+
+                    # 設定 A4 可用寬度 (210mm - 40mm margins = 170mm)
+                    # 欄位分配：類別(25), 項目(65), 結果(20), 說明(60)
+                    col_widths = [25*mm, 65*mm, 20*mm, 60*mm]
+                    
+                    # 創建表格，設定 repeatRows=1 讓標題行在跨頁時重複顯示
+                    t = Table(processed_table_data, colWidths=col_widths, repeatRows=1)
                     t.setStyle(TableStyle([
-                        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#0066cc')),
-                        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+                        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#f3f4f6')),
+                        ('TEXTCOLOR', (0, 0), (-1, 0), colors.HexColor('#111827')),
                         ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
                         ('FONTNAME', (0, 0), (-1, 0), font_bold),
-                        ('FONTSIZE', (0, 0), (-1, 0), 11),
+                        ('FONTSIZE', (0, 0), (-1, 0), 10),
                         ('FONTNAME', (0, 1), (-1, -1), font_name),
-                        ('FONTSIZE', (0, 1), (-1, -1), 10),
-                        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-                        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
-                        ('GRID', (0, 0), (-1, -1), 1, colors.HexColor('#dddddd')),
-                        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f9f9f9')])
+                        ('FONTSIZE', (0, 1), (-1, -1), 9),
+                        ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
+                        ('TOPPADDING', (0, 0), (-1, 0), 8),
+                        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#e5e7eb')),
+                        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f9fafb')])
                     ]))
+                    # 使用 KeepWithNext 邏輯（在 reportlab 中通常透過將標題與表格打包處理，或簡單增加 Spacer 調整）
+                    # 這裡我們確保表格前方的 Spacer 不會太大，並允許表格跨頁
                     story.append(t)
-                    story.append(Spacer(1, 12))
+                    story.append(Spacer(1, 15))
                 continue
             
             # 處理普通段落
@@ -156,6 +186,9 @@ def convert_md_to_pdf_reportlab(md_path, pdf_path):
                 text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
                 
                 if text:
+                    # 如果是結尾簽核部分，增加一點間距
+                    if "報告簽核" in text:
+                        story.append(Spacer(1, 20))
                     story.append(Paragraph(text, normal_style))
                     story.append(Spacer(1, 6))
             
@@ -175,8 +208,8 @@ def convert_md_to_pdf_reportlab(md_path, pdf_path):
         return False
 
 def main():
-    md_path = r"G:\我的雲端硬碟\AI公司\00專案\雄鷹網站\requirement_checklist.md"
-    pdf_path = r"G:\我的雲端硬碟\AI公司\00專案\雄鷹網站\requirement_checklist.pdf"
+    md_path = r"G:\我的雲端硬碟\AI公司\00專案\雄鷹網站\雄鷹官網_報價價值分析表.md"
+    pdf_path = r"G:\我的雲端硬碟\AI公司\00專案\雄鷹網站\雄鷹官網_報價價值分析表.pdf"
     
     # 檢查檔案是否存在
     if not os.path.exists(md_path):
