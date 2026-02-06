@@ -70,7 +70,7 @@ function App() {
               <div className="mb-10 relative flex flex-col items-center group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-red-600/20 to-amber-500/10 blur-3xl group-hover:from-red-600/30 transition-all duration-700"></div>
                 <a
-                  href="https://lin.ee/QLw5axr"
+                  href={realEstate.link || "https://lin.ee/jFkOyph"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block relative w-64 md:w-80 rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm cursor-pointer"
