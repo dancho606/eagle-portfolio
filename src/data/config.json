@@ -4,7 +4,7 @@
             "title": "政治人物\n首選操盤\n專業團隊",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Users",
-            "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/e730d60397e3f9e2658a5d8917fa8be5.jpg",
             "description": "專業政治選戰行銷團隊",
             "color": "text-white"
         },
@@ -12,7 +12,7 @@
             "title": "機器人販售\nRobot Sales",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Bot",
-            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/37ff40d34ce370137b788436119b016e.jpg",
             "description": "專業智能機器人銷售",
             "color": "text-blue-400"
         },
@@ -20,7 +20,7 @@
             "title": "Ai獲客系統銷售\nAI Solutions",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Rocket",
-            "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/6dab9f35f66e40d9882851aea4a0583b.jpg",
             "description": "AI驅動的高效獲客系統",
             "color": "text-emerald-400"
         },
@@ -28,7 +28,7 @@
             "title": "活動承辦\n記者會\n開幕承辦",
             "link": "https://youtu.be/uv6Vl3lKM78?si=r17OZCPt9rccW7b",
             "iconName": "Mic",
-            "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/ebd8fdafe7d4c50c18915d2be70655a0.jpg",
             "description": "專業活動企劃與現場執行",
             "color": "text-indigo-400"
         },
@@ -36,7 +36,7 @@
             "title": "廣告素材\n文案製作\n平面設計",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "Palette",
-            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/5787d7c6ab1832d4f7acf02fa879dd54.jpg",
             "description": "創意設計與文案撰寫",
             "color": "text-purple-400"
         },
@@ -44,7 +44,7 @@
             "title": "社群代操\n廣告投放\n口碑行銷",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "MessageCircle",
-            "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/78232ff97e39b61f093a7d4b33403f78.jpg",
             "description": "全方位社群媒體管理",
             "color": "text-green-400"
         },
@@ -52,7 +52,7 @@
             "title": "影音範例\nYoutube",
             "link": "https://www.youtube.com/@%E9%9B%84%E9%B7%B9%E5%BB%A3%E5%91%8A.tiptop",
             "iconName": "Youtube",
-            "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/c426a636df8b6e7db09b642115e046e1.jpg",
             "description": "專業影音製作服務",
             "color": "text-red-400"
         },
@@ -60,7 +60,7 @@
             "title": "媒體新聞\n電視新聞\n新聞專訪",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "Tv",
-            "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/6e2e4453c5bed582230021e4bd274578.jpg",
             "description": "媒體公關與新聞發布",
             "color": "text-yellow-400"
         },
@@ -68,7 +68,7 @@
             "title": "AI動畫\n短影音\n形象影片",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "Clapperboard",
-            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/ca777973f60407b92370120a97f7fd7e.jpg",
             "description": "AI驅動的影片製作",
             "color": "text-pink-400"
         },
@@ -76,7 +76,7 @@
             "title": "LED戶外廣告\nLED車體廣告",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "Building2",
-            "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/feeb78a628929710c17c3bcee0e3e666.jpg",
             "description": "戶外廣告投放服務",
             "color": "text-orange-400"
         },
@@ -84,7 +84,7 @@
             "title": "商標申請\n法律諮詢",
             "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
             "iconName": "Scale",
-            "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/b9f6127c724b28149ed421483704c902.jpg",
             "description": "智慧財產權保護",
             "color": "text-cyan-400"
         },
@@ -92,7 +92,7 @@
             "title": "雄鷹廣告\n動態簡報",
             "link": "https://www.canva.com/design/DAGLxLOB7iY/EOcaAk8IipCXuyQU1XYzUQ/view",
             "iconName": "FileText",
-            "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/services/482f091755744086454685b0753d7439.jpg",
             "description": "專業簡報設計服務",
             "color": "text-indigo-400"
         }
@@ -102,7 +102,7 @@
             "title": "我是廠商\n想找貴司合作",
             "link": "https://line.me/R/ti/p/@159qkxoz",
             "iconName": "Handshake",
-            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
+            "image": "/images/localized/misc/casematch_1.jpg",
             "description": "專業的品牌合作諮詢服務",
             "color": "text-blue-400"
         },
@@ -363,7 +363,7 @@
         },
         {
             "name": "安9兒\n育美生活日常",
-            "image": "https://scontent.ftpe15-1.fna.fbcdn.net/v/t39.30808-1/615351454_122105631237199508_4047761158242504158_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=XHAAyKrKG6IQ7kNvwGqC7Ay&_nc_oc=AdnGShRw3nGJDuxZBJXjtQbFkZT-DrKZj5PIu6anf8mYuPzmVGWD1Gcpck1RJ5PiayY&_nc_zt=24&_nc_ht=scontent.ftpe15-1.fna&_nc_gid=iaVS1pNM61bXsWCpFuRU2A&oh=00_Afq6LmP5dbmBtZ_4RSyfufUHxgWUoOpSlu-CPDlEDcjNKw&oe=6981E168",
+            "image": "/images/localized/kols/an9_new.jpg",
             "link": "https://www.facebook.com/profile.php?id=61585985255933",
             "line": "https://lin.ee/jFkOyph",
             "order": 36
@@ -439,43 +439,43 @@
             "title": "AI 成為產業標配 內容如何變成收入 雄鷹廣告解構變現關鍵路徑",
             "link": "https://tw.news.yahoo.com/share/f03a448c-82c4-3207-ab92-2a049ee4a115",
             "source": "Yahoo 新聞",
-            "image": "https://s.yimg.com/ny/api/res/1.2/4CI76tlTnGEtv8x2a5dDTA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/vi/lifetoutiao_news_333/3261bf306738e14198b2b956b4cd3b84"
+            "image": "/images/localized/news/8cedab2032ccf13d0cedc1194d7c919a.jpg"
         },
         {
             "title": "未來的內容趨勢 不再是「真人 vs AI」而是真人融合時代正式到來｜鷹傳媒",
             "link": "https://tw.news.yahoo.com/share/c1f9db63-ca98-357e-b2a7-69387765ba44",
             "source": "Yahoo 新聞",
-            "image": "https://s.yimg.com/os/ko/sunmedia_664/28ec9971aa0409cf341746338c66bb48"
+            "image": "/images/localized/news/159235b0c0709006101b62f9c2ae6421.jpg"
         },
         {
             "title": "「雄鷹廣告」後電商時代品牌戰開打「五大推薦理由」助企業突破銷量天花板",
             "link": "https://tw.stock.yahoo.com/share/dfbdeea7-6a82-3e3b-96ba-9808a883ab90",
             "source": "Yahoo 股市",
-            "image": "https://s.yimg.com/os/ko/sunmedia_664/5220d430191d6530d511a5cbc24e1c27"
+            "image": "/images/localized/news/148d99dc6f25198eabce074125f53e8c.jpg"
         },
         {
             "title": "台灣國球 向下紮根 ⚾️ 媒體公關找鷹傳媒",
             "link": "https://tw.news.yahoo.com/share/a93063cc-c72b-3150-9c06-cb09786638c9",
             "source": "Yahoo 新聞",
-            "image": "https://s.yimg.com/os/en/sunmedia_664/1aa992d0132d1610554129c91336c6a5"
+            "image": "/images/localized/news/16df81cc1b158da409613409e6b9cc74.jpg"
         },
         {
             "title": "台灣國球 向下紮根 ⚾️ 公益服務/活動紀錄",
             "link": "https://youtu.be/VyGWZ-rmxqQ?si=az3Ln-I_6pPZcANU",
             "source": "YouTube",
-            "image": "https://i.ytimg.com/vi/VyGWZ-rmxqQ/hqdefault.jpg"
+            "image": "/images/localized/news/5747a9b020e0bcdd6dcdb46e24f53713.jpg"
         },
         {
             "title": "翁子涵｜低調奢華的時尚魅力 來自雄鷹集團執行長梁軒安的「造浪」",
             "link": "https://www.storm.mg/article/4965334",
             "source": "風傳媒",
-            "image": "https://images.storm.mg/cloud/7e78c0365f30e8a3f6cd5a88638241713a6aa17c.jpg?url=s3%3A%2F%2Fnew-storm-public-resource%2Fgallery%2F1610855%2F20231227-105031_U24247_M920299_fa39.jpg&g=sm&h=675&resize=fill&w=1200&format=jpg"
+            "image": "/images/localized/news/e447204b5cdef6631faae0c4443010da.jpg"
         },
         {
             "title": "慎重登場 愛意不減｜梁軒安與蕭淑慎攜手八週年 十貓作伴幸福滿屋",
             "link": "https://tw.stock.yahoo.com/share/fa96383e-74f0-3fba-ad85-497d0e7b050e",
             "source": "Yahoo 股市",
-            "image": "https://s.yimg.com/os/en/sunmedia_664/fe2582d2a43748e5cb20e5fffbf1c63c"
+            "image": "/images/localized/news/7c4313877ebdcd5860475860d4e7bb47.jpg"
         },
         {
             "title": "雄鷹娛樂文創執行長梁軒安宣布要幹大事？首波台語新人余曼曼《慢慢等待你》",
@@ -487,25 +487,25 @@
             "title": "百萬直播主「封奶」轉戰歌壇！背後大咖金主曝光　放話當下個江蕙",
             "link": "https://www.setn.com/m/ampnews.aspx?NewsID=1311575",
             "source": "三立新聞網",
-            "image": "https://attach.setn.com/newsimages/2023/06/19/4208076-PH.jpg"
+            "image": "/images/localized/news/2ee4e7e53667f0d3724f9c867400528e.jpg"
         },
         {
             "title": "金鐘女神蕭淑慎夫妻「獻身」力挺！余曼曼睽維15年再演最新台語單曲《慢慢等待你》",
             "link": "https://www.ttshow.tw/article/102224",
             "source": "娛樂星聞",
-            "image": "https://img.ttshow.tw/images/author/CJ/00613首圖三三三.jpg"
+            "image": "/images/localized/news/f7f68db5add840795e16d3432635ab75.jpg"
         },
         {
             "title": "旅行兼追星，梁軒安、蕭淑慎夫妻聯手打造旅遊新文化",
             "link": "https://www.chinatimes.com/realtimenews/20180413000041-260507",
             "source": "中時新聞網",
-            "image": "https://images.chinatimes.com/newsphoto/2018-04-13/1024/20180413000042.jpg"
+            "image": "/images/localized/news/ff688883ee7b92bd1a246212091cf7c3.jpg"
         },
         {
             "title": "年紀輕輕就財富自由的女企業家－謝子芯，在雄鷹娛樂文創事業找到人生第二象限",
             "link": "https://tw.news.yahoo.com/share/985e982b-6246-3ba2-b231-92068e85d6a7",
             "source": "Yahoo 新聞",
-            "image": "https://s.yimg.com/ny/api/res/1.2/TuBSZYxOE18NdMnbRcfWKA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0xMjAw/https://media.zenfs.com/ko/mypeople.tw/8c7e37558c6500e03da892377fb8b5e0"
+            "image": "/images/localized/news/daeae528efabe74ba9e9d1e3856d5b43.jpg"
         }
     ],
     "partners": [
