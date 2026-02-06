@@ -70,7 +70,7 @@ function App() {
               <div className="mb-10 relative flex flex-col items-center group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-red-600/20 to-amber-500/10 blur-3xl group-hover:from-red-600/30 transition-all duration-700"></div>
                 <a
-                  href="https://lin.ee/jFkOyph"
+                  href="https://lin.ee/QLw5axr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block relative w-64 md:w-80 rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm cursor-pointer"
@@ -220,7 +220,7 @@ function App() {
 
               {/* Link Buttons Row 2 */}
               {[
-                { label: '機場接送', href: 'https://lin.ee/jFkOyph' },
+                { label: '禮車租借', href: 'https://lin.ee/jFkOyph' },
                 { label: '保鏢隨扈', href: 'https://lin.ee/jFkOyph' },
                 { label: '臨時演員', href: 'https://lin.ee/jFkOyph' }
               ].map((btn, idx) => (
@@ -433,14 +433,21 @@ function App() {
           </div>
         </div>
 
-        {/* Partner Logos Showcase (Combined Image) */}
-        <div className="mt-16 mb-8 max-w-5xl mx-auto px-6">
-          <div className="transition-all duration-700 flex justify-center">
-            <img
-              src="/images/partners_combined.png"
-              alt="Our Partners"
-              className="max-w-full h-auto"
-            />
+        {/* Partner Logos Showcase (Centered Grid Version - 6 per row) */}
+        <div className="mt-16 mb-24 max-w-4xl mx-auto px-12">
+          <div className="grid grid-cols-6 gap-[5px] items-center">
+            {partners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="flex items-center justify-center p-0"
+              >
+                <img
+                  src={partner.image}
+                  alt={partner.title || `Partner ${idx + 1}`}
+                  className="w-full h-auto max-h-12 md:max-h-16 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
