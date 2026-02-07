@@ -90,8 +90,11 @@ function App() {
 
                 {/* Real Estate Description */}
                 {realEstate && (
-                  <div className="mt-6 max-w-lg mx-auto px-4 animate-fade-in text-center">
-                    <p className="text-zinc-400 text-xs md:text-sm leading-relaxed tracking-wide font-medium italic">
+                  <div className="mt-6 max-w-lg mx-auto px-4 animate-fade-in text-left">
+                    <p
+                      className="text-zinc-400 text-xs md:text-sm leading-relaxed tracking-wide font-medium italic"
+                      style={{ whiteSpace: 'pre-wrap' }}
+                    >
                       {realEstate.description}
                     </p>
                   </div>
