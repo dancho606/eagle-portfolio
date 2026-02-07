@@ -38,7 +38,7 @@ function App() {
                   loop
                   playsInline
                   className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                  poster="/images/hero_new.jpg"
+                  poster="/images/hero_poster_new.jpg"
                 >
                   <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
                 </video>
