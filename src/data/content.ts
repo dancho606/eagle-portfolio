@@ -60,3 +60,4 @@ export const news = configData.news;
 export const mediaBadges = configData.mediaBadges;
 export const extremeMediaLogo = (configData as any).extremeMediaLogo;
 export const realEstate = (configData as any).realEstate;
+export const quickLinks = (configData as any).quickLinks;

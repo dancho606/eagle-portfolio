@@ -635,5 +635,13 @@
             "image": "/images/haoke-logo.jpg",
             "description": "專業餐飲品牌賦能"
         }
+    ],
+    "quickLinks": [
+        { "label": "我想要互惠", "href": "https://lin.ee/EXGpNHh" },
+        { "label": "產品換資源", "href": "https://lin.ee/jFkOyph" },
+        { "label": "我想要投資", "href": "https://lin.ee/jFkOyph" },
+        { "label": "禮車租借", "href": "https://lin.ee/jFkOyph" },
+        { "label": "保鏢隨扈", "href": "https://lin.ee/jFkOyph" },
+        { "label": "臨時演員", "href": "https://lin.ee/jFkOyph" }
     ]
 }

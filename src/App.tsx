@@ -1,7 +1,7 @@
 import { Instagram, Facebook, Volume2, VolumeX, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { GridCard } from './components/GridCard';
-import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate } from './data/content';
+import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate, quickLinks } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -200,31 +200,10 @@ function App() {
                 </button>
               ))}
 
-              {/* Link Buttons Row 1 */}
-              {[
-                { label: '我想要互惠', href: 'https://lin.ee/jFkOyph' },
-                { label: '產品換資源', href: 'https://lin.ee/jFkOyph' },
-                { label: '我想要投資', href: 'https://lin.ee/jFkOyph' }
-              ].map((btn, idx) => (
+              {/* Quick Links Row */}
+              {quickLinks && quickLinks.map((btn: any, idx: number) => (
                 <a
-                  key={idx}
-                  href={btn.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)]"
-                >
-                  <span className="relative z-10">{btn.label}</span>
-                </a>
-              ))}
-
-              {/* Link Buttons Row 2 */}
-              {[
-                { label: '禮車租借', href: 'https://lin.ee/jFkOyph' },
-                { label: '保鏢隨扈', href: 'https://lin.ee/jFkOyph' },
-                { label: '臨時演員', href: 'https://lin.ee/jFkOyph' }
-              ].map((btn, idx) => (
-                <a
-                  key={`row2-${idx}`}
+                  key={`quicklink-${idx}`}
                   href={btn.href}
                   target="_blank"
                   rel="noopener noreferrer"
