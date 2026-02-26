@@ -1,12 +1,15 @@
 import { Instagram, Facebook, Volume2, VolumeX, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { GridCard } from './components/GridCard';
+import { LimousinePage } from './components/LimousinePage';
 import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate, quickLinks } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('services');
+  const [currentView, setCurrentView] = useState<'main' | 'limousine'>('main');
   const [isMuted, setIsMuted] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -202,232 +205,255 @@ function App() {
 
               {/* Quick Links Row */}
               {quickLinks && quickLinks.map((btn: any, idx: number) => (
-                <a
+                <button
                   key={`quicklink-${idx}`}
-                  href={btn.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)]"
+                  onClick={() => {
+                    if (btn.label === '禮車租借') {
+                      setCurrentView('limousine');
+                    } else if (btn.href) {
+                      window.open(btn.href, '_blank', 'noopener,noreferrer');
+                    }
+                  }}
+                  className={`group relative flex items-center justify-center py-3 md:py-4 px-2 font-bold text-xs md:text-sm lg:text-base transition-all duration-300 overflow-hidden rounded-xl text-gray-500 hover:text-amber-400 hover:bg-zinc-900 border border-transparent w-[calc(33.333%-0.5rem)] sm:w-[calc(50%-0.5rem)] lg:w-[calc(16.666%-0.5rem)] ${currentView === 'limousine' && btn.label === '禮車租借' ? 'text-black bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600' : ''}`}
                 >
+                  {currentView === 'limousine' && btn.label === '禮車租借' && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 animate-pulse"></div>
+                  )}
                   <span className="relative z-10">{btn.label}</span>
-                </a>
+                </button>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-24">
-          {activeTab === 'services' && services.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
-            </div>
-          ))}
-          {activeTab === 'kols' && kols.map((kol, i) => (
-            <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={kol.name} image={kol.image} href={kol.link} lineLink={kol.line} />
-            </div>
-          ))}
-          {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
-            </div>
-          ))}
-          {activeTab === 'partners' && partners.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
-            </div>
-          ))}
-          {activeTab === 'recommendations' && news.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-              <GridCard title={item.title} subtitle={item.source} href={item.link} image={item.image} />
-            </div>
-          ))}
-          {activeTab === 'ventures' && ventures.map((item, i) => (
-            <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both] w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px]">
-              <GridCard title={item.title} subtitle={item.subtitle} href={item.link} icon={item.icon} image={item.image} />
-            </div>
-          ))}
-        </div>
-
-        {/* News Flash Section - Paginated Carousel (2 items per page) */}
-        <div className="mb-20 w-full px-4">
-          <div className="flex flex-col items-center gap-8 max-w-6xl mx-auto">
-            <div className="text-center space-y-2">
-              <div className="flex items-center justify-center gap-3 text-amber-500/80 font-bold tracking-[0.4em] text-[10px]">
-                <span className="w-6 h-px bg-amber-500/30"></span>
-                NEWS FLASH
-                <span className="w-6 h-px bg-amber-500/30"></span>
+        {/* Dynamic Content Area (Content Grid OR LimousinePage) */}
+        <AnimatePresence mode="wait">
+          {currentView === 'limousine' ? (
+            <LimousinePage key="limousine" onBack={() => setCurrentView('main')} />
+          ) : (
+            <motion.div
+              key="main"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+            >
+              {/* Content Grid */}
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-24">
+                {activeTab === 'services' && services.map((item, i) => (
+                  <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+                    <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+                  </div>
+                ))}
+                {activeTab === 'kols' && kols.map((kol, i) => (
+                  <div key={kol.name} style={{ animationDelay: `${i * 30}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+                    <GridCard title={kol.name} image={kol.image} href={kol.link} lineLink={kol.line} />
+                  </div>
+                ))}
+                {activeTab === 'caseMatch' && caseMatch.map((item, i) => (
+                  <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+                    <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+                  </div>
+                ))}
+                {activeTab === 'partners' && partners.map((item, i) => (
+                  <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+                    <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+                  </div>
+                ))}
+                {activeTab === 'recommendations' && news.map((item, i) => (
+                  <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
+                    <GridCard title={item.title} subtitle={item.source} href={item.link} image={item.image} />
+                  </div>
+                ))}
+                {activeTab === 'ventures' && ventures.map((item, i) => (
+                  <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="animate-[fadeIn_0.6s_ease-out_both] w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px]">
+                    <GridCard title={item.title} subtitle={item.subtitle} href={item.link} icon={item.icon} image={item.image} />
+                  </div>
+                ))}
               </div>
-              <h2 className="text-xl md:text-2xl font-bold tracking-tighter" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                新聞快訊
-              </h2>
-              <p className="text-xs text-zinc-500 mt-2">← 左右滑動查看更多 →</p>
-            </div>
 
-            {/* Paginated Scrolling Container */}
-            <div className="relative w-full group/carousel">
-              {/* Left Button */}
-              <button
-                onClick={() => scroll('left')}
-                className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
-                aria-label="Previous page"
-              >
-                <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
-              </button>
+              {/* News Flash Section - Paginated Carousel (2 items per page) */}
+              <div className="mb-20 w-full px-4">
+                <div className="flex flex-col items-center gap-8 max-w-6xl mx-auto">
+                  <div className="text-center space-y-2">
+                    <div className="flex items-center justify-center gap-3 text-amber-500/80 font-bold tracking-[0.4em] text-[10px]">
+                      <span className="w-6 h-px bg-amber-500/30"></span>
+                      NEWS FLASH
+                      <span className="w-6 h-px bg-amber-500/30"></span>
+                    </div>
+                    <h2 className="text-xl md:text-2xl font-bold tracking-tighter" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      新聞快訊
+                    </h2>
+                    <p className="text-xs text-zinc-500 mt-2">← 左右滑動查看更多 →</p>
+                  </div>
 
-              <div ref={scrollContainerRef} className="w-full overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-                <div className="flex gap-4">
-                  {news && (() => {
-                    // 將新聞分組，每頁2個
-                    const pages = [];
-                    for (let i = 0; i < news.length; i += 2) {
-                      pages.push(news.slice(i, i + 2));
-                    }
+                  {/* Paginated Scrolling Container */}
+                  <div className="relative w-full group/carousel">
+                    {/* Left Button */}
+                    <button
+                      onClick={() => scroll('left')}
+                      className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
+                      aria-label="Previous page"
+                    >
+                      <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
+                    </button>
 
-                    return pages.map((pageNews, pageIndex) => (
-                      <div
-                        key={pageIndex}
-                        className="flex-shrink-0 w-full snap-center grid grid-cols-2 gap-3 md:gap-6"
-                      >
-                        {pageNews.map((item: any, i: number) => (
-                          <a
-                            key={i}
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative flex flex-col bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300"
-                          >
-                            {/* Image Section */}
-                            <div className="aspect-[4/3] w-full overflow-hidden relative">
-                              <img
-                                src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
-                                alt={item.title}
-                                loading="lazy"
-                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                    <div ref={scrollContainerRef} className="w-full overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+                      <div className="flex gap-4">
+                        {news && (() => {
+                          // 將新聞分組，每頁2個
+                          const pages = [];
+                          for (let i = 0; i < news.length; i += 2) {
+                            pages.push(news.slice(i, i + 2));
+                          }
+
+                          return pages.map((pageNews, pageIndex) => (
+                            <div
+                              key={pageIndex}
+                              className="flex-shrink-0 w-full snap-center grid grid-cols-2 gap-3 md:gap-6"
+                            >
+                              {pageNews.map((item: any, i: number) => (
+                                <a
+                                  key={i}
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="group relative flex flex-col bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300"
+                                >
+                                  {/* Image Section */}
+                                  <div className="aspect-[4/3] w-full overflow-hidden relative">
+                                    <img
+                                      src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
+                                      alt={item.title}
+                                      loading="lazy"
+                                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                                  </div>
+
+                                  {/* Content Section */}
+                                  <div className="p-3 md:p-5 flex flex-col flex-grow relative">
+                                    <div className="mb-2">
+                                      <span className="text-[9px] md:text-[10px] text-amber-500/90 font-bold tracking-wider uppercase px-2 py-0.5 border border-amber-500/20 rounded-full bg-amber-500/5">
+                                        {item.source}
+                                      </span>
+                                    </div>
+
+                                    <h3 className="text-sm md:text-lg font-bold leading-snug text-gray-100 group-hover:text-amber-400 transition-colors line-clamp-3 md:line-clamp-2">
+                                      {item.title}
+                                    </h3>
+
+                                    <div className="mt-auto pt-3 flex items-center justify-end">
+                                      <span className="text-[9px] md:text-xs text-zinc-500 group-hover:text-amber-500/80 transition-colors flex items-center gap-1">
+                                        READ MORE <span className="transition-transform group-hover:translate-x-1">→</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </a>
+                              ))}
                             </div>
-
-                            {/* Content Section */}
-                            <div className="p-3 md:p-5 flex flex-col flex-grow relative">
-                              <div className="mb-2">
-                                <span className="text-[9px] md:text-[10px] text-amber-500/90 font-bold tracking-wider uppercase px-2 py-0.5 border border-amber-500/20 rounded-full bg-amber-500/5">
-                                  {item.source}
-                                </span>
-                              </div>
-
-                              <h3 className="text-sm md:text-lg font-bold leading-snug text-gray-100 group-hover:text-amber-400 transition-colors line-clamp-3 md:line-clamp-2">
-                                {item.title}
-                              </h3>
-
-                              <div className="mt-auto pt-3 flex items-center justify-end">
-                                <span className="text-[9px] md:text-xs text-zinc-500 group-hover:text-amber-500/80 transition-colors flex items-center gap-1">
-                                  READ MORE <span className="transition-transform group-hover:translate-x-1">→</span>
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        ))}
+                          ));
+                        })()}
                       </div>
-                    ));
-                  })()}
+                    </div>
+
+                    {/* Right Button */}
+                    <button
+                      onClick={() => scroll('right')}
+                      className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
+                      aria-label="Next page"
+                    >
+                      <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
+                    </button>
+                  </div>
+
+                  <div className="w-full pt-8 border-t border-zinc-900/40 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+                    <img
+                      src={extremeMediaLogo}
+                      alt="Extreme Media"
+                      className="h-14 md:h-20 hover:scale-105 transition-all duration-700 shadow-xl"
+                    />
+                    <img
+                      src={mediaBadges}
+                      alt="Media Partners"
+                      className="w-full max-w-md transition-all duration-700"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Right Button */}
-              <button
-                onClick={() => scroll('right')}
-                className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-20 p-2 lg:p-3 bg-zinc-900/80 hover:bg-amber-600 text-white/50 hover:text-white rounded-full border border-zinc-700 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 backdrop-blur-sm"
-                aria-label="Next page"
-              >
-                <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
-              </button>
-            </div>
+              {/* Action Section */}
+              <div className="text-center max-w-3xl mx-auto relative px-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 via-transparent to-amber-600/10 blur-3xl"></div>
 
-            <div className="w-full pt-8 border-t border-zinc-900/40 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
-              <img
-                src={extremeMediaLogo}
-                alt="Extreme Media"
-                className="h-14 md:h-20 hover:scale-105 transition-all duration-700 shadow-xl"
-              />
-              <img
-                src={mediaBadges}
-                alt="Media Partners"
-                className="w-full max-w-md transition-all duration-700"
-              />
-            </div>
-          </div>
-        </div>
+                <div className="relative p-8 md:p-16 bg-zinc-950 border-2 border-amber-600/30 rounded-3xl">
+                  <div className="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-amber-500 rounded-tl-3xl"></div>
+                  <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-amber-500 rounded-br-3xl"></div>
 
-        {/* Action Section */}
-        <div className="text-center max-w-3xl mx-auto relative px-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 via-transparent to-amber-600/10 blur-3xl"></div>
+                  <h2 className="text-2xl md:text-5xl font-bold mb-8 leading-tight drop-shadow-lg" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 bg-clip-text text-transparent inline-block">
+                      讓我們一起打造影響力
+                    </span>
+                  </h2>
 
-          <div className="relative p-8 md:p-16 bg-zinc-950 border-2 border-amber-600/30 rounded-3xl">
-            <div className="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-amber-500 rounded-tl-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-amber-500 rounded-br-3xl"></div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a
+                      href="https://lin.ee/jFkOyph"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                      <img src="/line_logo.svg" alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <span className="relative whitespace-nowrap">LINE</span>
+                    </a>
 
-            <h2 className="text-2xl md:text-5xl font-bold mb-8 leading-tight drop-shadow-lg" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 bg-clip-text text-transparent inline-block">
-                讓我們一起打造影響力
-              </span>
-            </h2>
+                    <a
+                      href="https://www.instagram.com/hsuan.ya_official"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                      <Instagram className="relative w-8 h-8 flex-shrink-0 text-white" />
+                      <span className="relative whitespace-nowrap">Instagram</span>
+                    </a>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://lin.ee/jFkOyph"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <img src="/line_logo.svg" alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="relative whitespace-nowrap">LINE</span>
-              </a>
-
-              <a
-                href="https://www.instagram.com/hsuan.ya_official"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-auto"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <Instagram className="relative w-8 h-8 flex-shrink-0 text-white" />
-                <span className="relative whitespace-nowrap">Instagram</span>
-              </a>
-
-              <a
-                href="https://www.facebook.com/tge.tiptop.genius/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-auto"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <Facebook className="relative w-8 h-8 flex-shrink-0 text-white" />
-                <span className="relative whitespace-nowrap">Facebook</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Partner Logos Showcase (Centered Grid Version - 6 per row) */}
-        <div className="mt-16 mb-24 max-w-4xl mx-auto px-12">
-          <div className="grid grid-cols-6 gap-[5px] items-center">
-            {partners.map((partner, idx) => (
-              <div
-                key={idx}
-                className="flex items-center justify-center p-0"
-              >
-                <img
-                  src={partner.image}
-                  alt={partner.title || `Partner ${idx + 1}`}
-                  className="w-full h-auto max-h-12 md:max-h-16 object-contain"
-                />
+                    <a
+                      href="https://www.facebook.com/tge.tiptop.genius/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                      <Facebook className="relative w-8 h-8 flex-shrink-0 text-white" />
+                      <span className="relative whitespace-nowrap">Facebook</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+
+              {/* Partner Logos Showcase (Centered Grid Version - 6 per row) */}
+              <div className="mt-16 mb-24 max-w-4xl mx-auto px-12">
+                <div className="grid grid-cols-6 gap-[5px] items-center">
+                  {partners.map((partner, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-center p-0"
+                    >
+                      <img
+                        src={partner.image}
+                        alt={partner.title || `Partner ${idx + 1}`}
+                        className="w-full h-auto max-h-12 md:max-h-16 object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Footer / Powered By */}
