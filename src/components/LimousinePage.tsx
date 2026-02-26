@@ -1,13 +1,8 @@
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import { ChevronLeft } from 'lucide-react';
 import { limousineService } from '../data/content';
 
-interface LimousinePageProps {
-    onBack: () => void;
-}
-
-export function LimousinePage({ onBack }: LimousinePageProps) {
+export function LimousinePage() {
     // 動畫變數：錯落進場 (Stagger Options)
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -38,15 +33,8 @@ export function LimousinePage({ onBack }: LimousinePageProps) {
             exit="exit"
             className="w-full flex justify-center items-center flex-col px-4 pb-24"
         >
-            {/* 頂部導覽列 (只有選單內頁面才有) */}
-            <div className="w-full max-w-6xl flex justify-between items-center mb-8">
-                <button
-                    onClick={onBack}
-                    className="group flex items-center gap-2 px-4 py-2 bg-zinc-900/50 hover:bg-zinc-800 rounded-full border border-white/5 transition-all duration-300 backdrop-blur-sm"
-                >
-                    <ChevronLeft className="w-4 h-4 text-zinc-400 group-hover:text-amber-500 transition-colors" />
-                    <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">返回選單</span>
-                </button>
+            {/* 頂部標題 */}
+            <div className="w-full max-w-6xl flex justify-end items-center mb-8">
                 <div className="text-right">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tighter" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                         <span className="text-white">尊榮 </span>
