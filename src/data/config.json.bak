@@ -1,0 +1,724 @@
+{
+    "services": [
+        {
+            "title": "政治人物\n首選操盤\n專業團隊",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Users",
+            "image": "/images/localized/services/e730d60397e3f9e2658a5d8917fa8be5.jpg",
+            "description": "專業政治選戰行銷團隊",
+            "color": "text-white"
+        },
+        {
+            "title": "機器人販售\nRobot Sales",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Bot",
+            "image": "/images/localized/services/37ff40d34ce370137b788436119b016e.jpg",
+            "description": "專業智能機器人銷售",
+            "color": "text-blue-400"
+        },
+        {
+            "title": "Ai獲客系統銷售\nAI Solutions",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Rocket",
+            "image": "/images/localized/services/6dab9f35f66e40d9882851aea4a0583b.jpg",
+            "description": "AI驅動的高效獲客系統",
+            "color": "text-emerald-400"
+        },
+        {
+            "title": "活動承辦\n記者會\n開幕承辦",
+            "link": "https://youtu.be/uv6Vl3lKM78?si=r17OZCPt9rccW7b",
+            "iconName": "Mic",
+            "image": "/images/localized/services/ebd8fdafe7d4c50c18915d2be70655a0.jpg",
+            "description": "專業活動企劃與現場執行",
+            "color": "text-indigo-400"
+        },
+        {
+            "title": "廣告素材\n文案製作\n平面設計",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "Palette",
+            "image": "/images/localized/services/5787d7c6ab1832d4f7acf02fa879dd54.jpg",
+            "description": "創意設計與文案撰寫",
+            "color": "text-purple-400"
+        },
+        {
+            "title": "社群代操\n廣告投放\n口碑行銷",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "MessageCircle",
+            "image": "/images/localized/services/78232ff97e39b61f093a7d4b33403f78.jpg",
+            "description": "全方位社群媒體管理",
+            "color": "text-green-400"
+        },
+        {
+            "title": "影音範例\nYoutube",
+            "link": "https://www.youtube.com/@%E9%9B%84%E9%B7%B9%E5%BB%A3%E5%91%8A.tiptop",
+            "iconName": "Youtube",
+            "image": "/images/localized/services/c426a636df8b6e7db09b642115e046e1.jpg",
+            "description": "專業影音製作服務",
+            "color": "text-red-400"
+        },
+        {
+            "title": "媒體新聞\n電視新聞\n新聞專訪",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "Tv",
+            "image": "/images/localized/services/6e2e4453c5bed582230021e4bd274578.jpg",
+            "description": "媒體公關與新聞發布",
+            "color": "text-yellow-400"
+        },
+        {
+            "title": "AI動畫\n短影音\n形象影片",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "Clapperboard",
+            "image": "/images/localized/services/ca777973f60407b92370120a97f7fd7e.jpg",
+            "description": "AI驅動的影片製作",
+            "color": "text-pink-400"
+        },
+        {
+            "title": "LED戶外廣告\nLED車體廣告",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "Building2",
+            "image": "/images/localized/services/feeb78a628929710c17c3bcee0e3e666.jpg",
+            "description": "戶外廣告投放服務",
+            "color": "text-orange-400"
+        },
+        {
+            "title": "商標申請\n法律諮詢",
+            "link": "https://line.me/R/ti/p/@159qkxoz?oat_content=url&ts=10141733",
+            "iconName": "Scale",
+            "image": "/images/localized/services/b9f6127c724b28149ed421483704c902.jpg",
+            "description": "智慧財產權保護",
+            "color": "text-cyan-400"
+        },
+        {
+            "title": "雄鷹廣告\n動態簡報",
+            "link": "https://www.canva.com/design/DAGLxLOB7iY/EOcaAk8IipCXuyQU1XYzUQ/view",
+            "iconName": "FileText",
+            "image": "/images/localized/services/482f091755744086454685b0753d7439.jpg",
+            "description": "專業簡報設計服務",
+            "color": "text-indigo-400"
+        }
+    ],
+    "caseMatch": [
+        {
+            "title": "我是廠商\n想找貴司合作",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Handshake",
+            "image": "/images/localized/misc/casematch_1.jpg",
+            "description": "專業的品牌合作諮詢服務",
+            "color": "text-blue-400"
+        },
+        {
+            "title": "我有專業\n想找案件",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "iconName": "Briefcase",
+            "image": "/images/talent_consultation.png",
+            "description": "專業人才資源開發與案件媒合",
+            "color": "text-amber-400"
+        }
+    ],
+    "kols": [
+        {
+            "name": "楊菓菓\nCandice",
+            "image": "/images/KOL/楊菓菓Candice.webp",
+            "link": "https://www.facebook.com/tge.candice",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 1
+        },
+        {
+            "name": "凡妮莎\nVanessa",
+            "image": "/images/KOL/凡妮莎 Vanessa.webp",
+            "link": "https://www.facebook.com/vanessa.tge/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 2
+        },
+        {
+            "name": "李海莉\nHayley",
+            "image": "/images/KOL/李海莉 Hayley.webp",
+            "link": "https://www.facebook.com/hayley.tge/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 3
+        },
+        {
+            "name": "李佩娟\nPhoebe",
+            "image": "/images/KOL/李佩娟Phoebe.webp",
+            "link": "https://www.facebook.com/tge.phoebe",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 4
+        },
+        {
+            "name": "水果姐姐\nMimi",
+            "image": "/images/KOL/水果小姐姐Mimi.webp",
+            "link": "https://www.facebook.com/mimi.tge.m",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 5
+        },
+        {
+            "name": "謝子芯\nLeNa",
+            "image": "/images/KOL/謝子芯 LeNa.webp",
+            "link": "https://www.facebook.com/lena.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 6
+        },
+        {
+            "name": "董湘鈴\nLena",
+            "image": "/images/KOL/elna.webp",
+            "link": "https://www.facebook.com/Dr.bo.tge",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 7
+        },
+        {
+            "name": "陳詩縈\nSarah",
+            "image": "/images/KOL/陳詩縈.webp",
+            "link": "https://www.facebook.com/profile.php?id=61553643382380",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 8
+        },
+        {
+            "name": "星兒\nSylivia",
+            "image": "/images/KOL/星兒.webp",
+            "link": "https://www.facebook.com/sylvia.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 9
+        },
+        {
+            "name": "嚴淑明\nMandy Yan",
+            "image": "/images/KOL/嚴淑明 Mandy Yan.webp",
+            "link": "https://www.facebook.com/yanshuming",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 10
+        },
+        {
+            "name": "謝NN",
+            "image": "/images/KOL/謝NN.webp",
+            "link": "https://www.facebook.com/nn.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 11
+        },
+        {
+            "name": "鹿鹿\nLuz",
+            "image": "/images/KOL/鹿鹿 Luz.webp",
+            "link": "https://www.facebook.com/luz.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 12
+        },
+        {
+            "name": "凱哥的媽媽咪呀",
+            "image": "/images/KOL/凱哥的媽媽咪呀.webp",
+            "link": "https://www.facebook.com/nancy.tge.tw",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 13
+        },
+        {
+            "name": "跟著Rhea慢生活",
+            "image": "/images/KOL/跟著Lynn慢生活.webp",
+            "link": "https://www.facebook.com/lynn.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 14
+        },
+        {
+            "name": "木瓜米米\nDebby",
+            "image": "/images/KOL/木瓜米米 Debby.webp",
+            "link": "https://www.facebook.com/debby.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 15
+        },
+        {
+            "name": "金貝貝\nBayKi",
+            "image": "/images/KOL/金貝貝 BayKi.webp",
+            "link": "https://www.facebook.com/bayki.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 16
+        },
+        {
+            "name": "楊琪琪\nDoris",
+            "image": "/images/KOL/楊琪琪Doris.webp",
+            "link": "https://www.facebook.com/doris.tge.kiki",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 17
+        },
+        {
+            "name": "翁子涵\nAdurina",
+            "image": "/images/KOL/翁子涵.webp",
+            "link": "https://www.facebook.com/babe.weng",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 18
+        },
+        {
+            "name": "梁軒安\nEagle",
+            "image": "/images/KOL/梁軒安 Eagle-軒爺.webp",
+            "link": "https://www.facebook.com/@eagle.tge",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 19
+        },
+        {
+            "name": "王俐喬\nJosephine",
+            "image": "/images/KOL/王俐喬 Josephine.webp",
+            "link": "https://www.facebook.com/Josephine.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 20
+        },
+        {
+            "name": "蕭淑慎\nKitty",
+            "image": "/images/KOL/蕭淑慎KittyHsiao.webp",
+            "link": "https://www.facebook.com/L.hsiao.shu.shen",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 21
+        },
+        {
+            "name": "糖糖\nTang Tang",
+            "image": "/images/KOL/糖糖 Tang Tang.webp",
+            "link": "https://www.facebook.com/tang.official.tge/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 22
+        },
+        {
+            "name": "葉子\n葉香吟",
+            "image": "/images/KOL/葉子 葉香吟.webp",
+            "link": "https://www.facebook.com/yi.tge.official",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 23
+        },
+        {
+            "name": "蔡甜甜\nBrandy",
+            "image": "/images/KOL/蔡甜甜 Brandy.webp",
+            "link": "https://www.facebook.com/brandy.tge.tw/",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 24
+        },
+        {
+            "name": "余曼曼\nAmanda",
+            "image": "/images/KOL/余曼曼Amanda.webp",
+            "link": "https://www.facebook.com/tge.amanda",
+            "line": "https://line.me/R/ti/p/@159qkxoz",
+            "order": 25
+        },
+        {
+            "name": "甜心Q匠\nSweet",
+            "image": "/images/KOL/甜心Q匠.webp",
+            "link": "https://www.facebook.com/minipu.fans/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 26
+        },
+        {
+            "name": "王沁芳\nAngel",
+            "image": "/images/KOL/王沁芳.webp",
+            "link": "https://www.facebook.com/an9singing/?locale=zh_TW",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 27
+        },
+        {
+            "name": "品艾\nAbby",
+            "image": "/images/KOL/品艾Abby.webp",
+            "link": "https://www.facebook.com/abby.hopetge",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 28
+        },
+        {
+            "name": "薩琳\nSerene",
+            "image": "/images/KOL/Serene - 薩琳 -.webp",
+            "link": "https://www.facebook.com/i.serene",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 29
+        },
+        {
+            "name": "簡湘穎\nEmma",
+            "image": "/images/KOL/簡湘穎 Emma.webp",
+            "link": "https://www.facebook.com/emma.tooya.tge/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 30
+        },
+        {
+            "name": "黃菲菲\nAmber",
+            "image": "/images/KOL/Amber H .webp",
+            "link": "https://www.facebook.com/amber.tge/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 31
+        },
+        {
+            "name": "緯哥\nWego",
+            "image": "/images/KOL/瑋哥的故事.webp",
+            "link": "https://www.facebook.com/mcrapgood",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 32
+        },
+        {
+            "name": "E小姐不購物會憂鬱",
+            "image": "/images/KOL/Elena小姐不購物會憂鬱.webp",
+            "link": "https://www.facebook.com/elena.tge.e/",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 33
+        },
+        {
+            "name": "王破崙\nKiki",
+            "image": "/images/KOL/王破崙 Kiki.webp",
+            "link": "https://www.facebook.com/kiki.tge",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 34
+        },
+        {
+            "name": "琳娜\nR-tina",
+            "image": "/images/KOL/琳娜 R-tina.webp",
+            "link": "https://www.facebook.com/Nana.Family.love.Fs",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 35
+        },
+        {
+            "name": "安9兒\n育美生活日常",
+            "image": "/images/localized/kols/an9_new.jpg",
+            "link": "https://www.facebook.com/profile.php?id=61585985255933",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 36
+        },
+        {
+            "name": "部落客\n其他百位網紅",
+            "image": "/images/blogger_kol.png",
+            "link": "https://line.me/R/ti/p/@159qkxoz",
+            "line": "https://lin.ee/jFkOyph",
+            "order": 37
+        }
+    ],
+    "ventures": [
+        {
+            "title": "明星之旅-Hope Tour (旅行社)",
+            "subtitle": "全台唯一明星旅遊專賣店",
+            "link": "https://www.facebook.com/hope.tour.tge",
+            "iconName": "Plane",
+            "image": "/images/關係企業/旅遊.jpg",
+            "description": "提供明星級旅遊體驗",
+            "bg": "from-blue-500 to-cyan-500"
+        },
+        {
+            "title": "TGE Golf",
+            "subtitle": "高爾夫球教學\n球具買賣",
+            "link": "https://line.me/R/ti/p/@226mteho?ts=02022237&oat_content=url",
+            "iconName": "Trophy",
+            "image": "/images/關係企業/高爾夫.jpg",
+            "description": "專業高爾夫球訓練",
+            "bg": "from-green-500 to-emerald-500"
+        },
+        {
+            "title": "雄鷹設計 TGE Design",
+            "subtitle": "老屋翻新\n商業空間",
+            "link": "https://www.facebook.com/Tge.tw",
+            "iconName": "Home",
+            "image": "/images/關係企業/ventures_design2.jpg",
+            "description": "打造理想空間",
+            "bg": "from-orange-500 to-amber-500"
+        },
+        {
+            "title": "宅經濟電商",
+            "subtitle": "蝦皮賣場\n聯名合作",
+            "link": "https://shopee.tw/tge.shop.tw",
+            "iconName": "ShoppingBag",
+            "image": "/images/關係企業/宅經濟.jpg",
+            "description": "電商平台經營",
+            "bg": "from-purple-500 to-pink-500"
+        }
+    ],
+    "portfolio": {
+        "video": {
+            "items": [
+                {
+                    "id": "DBqGuTVDsHE"
+                }
+            ]
+        },
+        "design": {
+            "link": "https://www.facebook.com/tge.tiptop.genius/"
+        }
+    },
+    "mediaBadges": "/images/news_media_badges.jpg",
+    "extremeMediaLogo": "/images/extreme_media_logo.png",
+    "realEstate": {
+        "image": "/images/雄鷹置業圖.jpg",
+        "title": "香港（深圳）雄鷹置業",
+        "link": "https://www.tiktok.com/@xiong.ying_zhiye?_r=1&_t=ZS-93ghvgrNASA",
+        "description": "專注於國際房地產投資與跨境資產配置，深耕大灣區、馬來西亞、越南、泰國、日本、杜拜及歐美市場。團隊以實地考察為核心，整合開發商資源、法規結構、投資與居住需求，協助客戶做出理性且具長期價值的決策。提供從市場判斷、策略面到後續服務的一站式專業顧問，陪伴客戶穩健布局全球不動產。\n\n＊本品牌介紹僅提供資訊分享與實地參訪，不涉及任何銷售、仲介或投資承諾。"
+    },
+    "news": [
+        {
+            "title": "AI 成為產業標配 內容如何變成收入 雄鷹廣告解構變現關鍵路徑",
+            "link": "https://tw.news.yahoo.com/share/f03a448c-82c4-3207-ab92-2a049ee4a115",
+            "source": "Yahoo 新聞",
+            "image": "/images/localized/news/8cedab2032ccf13d0cedc1194d7c919a.jpg"
+        },
+        {
+            "title": "未來的內容趨勢 不再是「真人 vs AI」而是真人融合時代正式到來｜鷹傳媒",
+            "link": "https://tw.news.yahoo.com/share/c1f9db63-ca98-357e-b2a7-69387765ba44",
+            "source": "Yahoo 新聞",
+            "image": "/images/localized/news/159235b0c0709006101b62f9c2ae6421.jpg"
+        },
+        {
+            "title": "「雄鷹廣告」後電商時代品牌戰開打「五大推薦理由」助企業突破銷量天花板",
+            "link": "https://tw.stock.yahoo.com/share/dfbdeea7-6a82-3e3b-96ba-9808a883ab90",
+            "source": "Yahoo 股市",
+            "image": "/images/localized/news/148d99dc6f25198eabce074125f53e8c.jpg"
+        },
+        {
+            "title": "台灣國球 向下紮根 ⚾️ 媒體公關找鷹傳媒",
+            "link": "https://tw.news.yahoo.com/share/a93063cc-c72b-3150-9c06-cb09786638c9",
+            "source": "Yahoo 新聞",
+            "image": "/images/localized/news/16df81cc1b158da409613409e6b9cc74.jpg"
+        },
+        {
+            "title": "台灣國球 向下紮根 ⚾️ 公益服務/活動紀錄",
+            "link": "https://youtu.be/VyGWZ-rmxqQ?si=az3Ln-I_6pPZcANU",
+            "source": "YouTube",
+            "image": "/images/localized/news/5747a9b020e0bcdd6dcdb46e24f53713.jpg"
+        },
+        {
+            "title": "翁子涵｜低調奢華的時尚魅力 來自雄鷹集團執行長梁軒安的「造浪」",
+            "link": "https://www.storm.mg/article/4965334",
+            "source": "風傳媒",
+            "image": "/images/localized/news/e447204b5cdef6631faae0c4443010da.jpg"
+        },
+        {
+            "title": "慎重登場 愛意不減｜梁軒安與蕭淑慎攜手八週年 十貓作伴幸福滿屋",
+            "link": "https://tw.stock.yahoo.com/share/fa96383e-74f0-3fba-ad85-497d0e7b050e",
+            "source": "Yahoo 股市",
+            "image": "/images/localized/news/7c4313877ebdcd5860475860d4e7bb47.jpg"
+        },
+        {
+            "title": "雄鷹娛樂文創執行長梁軒安宣布要幹大事？首波台語新人余曼曼《慢慢等待你》",
+            "link": "https://www.hitoradio.com/mobile/hitonews_inner.php?news_id=80570",
+            "source": "Hito Radio",
+            "image": "https://www.hitoradio.com/media/news/big/c9eda9f9b82f.jpg"
+        },
+        {
+            "title": "百萬直播主「封奶」轉戰歌壇！背後大咖金主曝光　放話當下個江蕙",
+            "link": "https://www.setn.com/m/ampnews.aspx?NewsID=1311575",
+            "source": "三立新聞網",
+            "image": "/images/localized/news/2ee4e7e53667f0d3724f9c867400528e.jpg"
+        },
+        {
+            "title": "金鐘女神蕭淑慎夫妻「獻身」力挺！余曼曼睽維15年再演最新台語單曲《慢慢等待你》",
+            "link": "https://www.ttshow.tw/article/102224",
+            "source": "娛樂星聞",
+            "image": "/images/localized/news/f7f68db5add840795e16d3432635ab75.jpg"
+        },
+        {
+            "title": "旅行兼追星，梁軒安、蕭淑慎夫妻聯手打造旅遊新文化",
+            "link": "https://www.chinatimes.com/realtimenews/20180413000041-260507",
+            "source": "中時新聞網",
+            "image": "/images/localized/news/ff688883ee7b92bd1a246212091cf7c3.jpg"
+        },
+        {
+            "title": "年紀輕輕就財富自由的女企業家－謝子芯，在雄鷹娛樂文創事業找到人生第二象限",
+            "link": "https://tw.news.yahoo.com/share/985e982b-6246-3ba2-b231-92068e85d6a7",
+            "source": "Yahoo 新聞",
+            "image": "/images/localized/news/daeae528efabe74ba9e9d1e3856d5b43.jpg"
+        }
+    ],
+    "partners": [
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_1.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_2.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_3.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_4.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_5.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_6.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_7.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_8.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_9.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_10.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_11.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_12.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_13.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_14.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_15.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_16.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "#",
+            "iconName": "Handshake",
+            "image": "/images/合作客戶/LINE_ALBUM_客戶LOGO_260130_17.jpg",
+            "description": ""
+        },
+        {
+            "title": "",
+            "link": "https://lin.ee/jFkOyph",
+            "iconName": "Handshake",
+            "image": "/images/haoke-logo.jpg",
+            "description": "專業餐飲品牌賦能"
+        }
+    ],
+    "quickLinks": [
+        {
+            "label": "我想要互惠",
+            "href": "https://lin.ee/EXGpNHh"
+        },
+        {
+            "label": "產品換資源",
+            "href": "https://lin.ee/jFkOyph"
+        },
+        {
+            "label": "我想要投資",
+            "href": "https://lin.ee/jFkOyph"
+        },
+        {
+            "label": "禮車租借",
+            "href": "https://lin.ee/jFkOyph"
+        },
+        {
+            "label": "保鏢隨扈",
+            "href": "https://lin.ee/jFkOyph"
+        },
+        {
+            "label": "臨時演員",
+            "href": "https://lin.ee/jFkOyph"
+        }
+    ],
+    "limousineService": {
+        "heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=80",
+        "vehicles": [
+            {
+                "id": "alphard-35-old",
+                "name": "35舊款阿法",
+                "image": "/images/cars/2.png",
+                "price": "$9000/3h",
+                "overtime": "$1000",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            },
+            {
+                "id": "alphard-40-new",
+                "name": "40新款阿法",
+                "image": "/images/cars/1.png",
+                "price": "$9500/3h",
+                "overtime": "$1500",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            },
+            {
+                "id": "lm-35-old",
+                "name": "35舊款LM",
+                "image": "/images/cars/4.png",
+                "price": "$10000/3h",
+                "overtime": "$1600",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            },
+            {
+                "id": "lm-40-new",
+                "name": "40新款LM",
+                "image": "/images/cars/3.png",
+                "price": "$13000/3h",
+                "overtime": "$1800",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            },
+            {
+                "id": "benz-s350",
+                "name": "Benz S350-W222",
+                "image": "/images/cars/5.png",
+                "price": "$12000/3h",
+                "overtime": "$1500",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            },
+            {
+                "id": "benz-e214",
+                "name": "Benz E214",
+                "image": "/images/cars/6.png",
+                "price": "$9000/3h",
+                "overtime": "$1000",
+                "redEnvelope": "$600起",
+                "href": "https://lin.ee/jFkOyph"
+            }
+        ]
+    }
+}
