@@ -95,6 +95,14 @@
             "image": "/images/localized/services/482f091755744086454685b0753d7439.jpg",
             "description": "專業簡報設計服務",
             "color": "text-indigo-400"
+        },
+        {
+            "title": "網站架設\nWeb Design",
+            "link": "internal:webDesign",
+            "iconName": "Layout",
+            "image": "/images/plan_lego.png",
+            "description": "專業網站設計與開發服務",
+            "color": "text-amber-400"
         }
     ],
     "caseMatch": [

@@ -3,13 +3,14 @@ import { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GridCard } from './components/GridCard';
 import { LimousinePage } from './components/LimousinePage';
+import { WebDesignPage } from './components/WebDesignPage';
 import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate, quickLinks } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('services');
-  const [currentView, setCurrentView] = useState<'main' | 'limousine'>('main');
+  const [currentView, setCurrentView] = useState<'main' | 'limousine' | 'webDesign'>('main');
   const [isMuted, setIsMuted] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -233,6 +234,8 @@ function App() {
         <AnimatePresence mode="wait">
           {currentView === 'limousine' ? (
             <LimousinePage key="limousine" />
+          ) : currentView === 'webDesign' ? (
+            <WebDesignPage key="webDesign" />
           ) : (
             <motion.div
               key="main"
@@ -245,7 +248,17 @@ function App() {
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-24">
                 {activeTab === 'services' && services.map((item, i) => (
                   <div key={item.title} style={{ animationDelay: `${i * 50}ms` }} className="w-[calc(50%-8px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] max-w-[300px] animate-[fadeIn_0.6s_ease-out_both]">
-                    <GridCard title={item.title} href={item.link} icon={item.icon} image={item.image} />
+                    <GridCard
+                      title={item.title}
+                      href={item.link.startsWith('internal:') ? undefined : item.link}
+                      icon={item.icon}
+                      image={item.image}
+                      onClick={() => {
+                        if (item.link === 'internal:webDesign') {
+                          setCurrentView('webDesign');
+                        }
+                      }}
+                    />
                   </div>
                 ))}
                 {activeTab === 'kols' && kols.map((kol, i) => (

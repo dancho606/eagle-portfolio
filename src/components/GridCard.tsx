@@ -7,15 +7,16 @@ interface GridCardProps {
     icon?: LucideIcon;
     image?: string;
     lineLink?: string;
+    onClick?: () => void;
 }
 
-export function GridCard({ title, subtitle, href = "#", image, lineLink }: GridCardProps) {
+export function GridCard({ title, subtitle, href = "#", image, lineLink, onClick }: GridCardProps) {
     return (
-        <div className="relative group">
+        <div className="relative group" onClick={onClick}>
             <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={onClick ? undefined : href}
+                target={onClick ? undefined : "_blank"}
+                rel={onClick ? undefined : "noopener noreferrer"}
                 className="relative flex flex-col justify-end p-6 aspect-square bg-zinc-900 border border-zinc-800 hover:border-amber-500 transition-all duration-500 cursor-pointer overflow-hidden rounded-2xl shadow-lg block"
             >
                 {/* Background Image - Always present or fallback */}

@@ -2,7 +2,7 @@ import {
     Handshake, Palette, MessageCircle, Youtube,
     Tv, Clapperboard, Building2, Scale,
     FileText, Plane, Trophy, Home, ShoppingBag, Users,
-    Bot, Mic, Rocket
+    Bot, Mic, Rocket, Layout
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import configData from './config.json';
@@ -11,7 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
     Handshake, Palette, MessageCircle, Youtube,
     Tv, Clapperboard, Building2, Scale,
     FileText, Plane, Trophy, Home, ShoppingBag, Users,
-    Bot, Mic, Rocket
+    Bot, Mic, Rocket, Layout
 };
 
 interface ServiceItem {
