@@ -420,7 +420,7 @@ function App() {
                 href="https://lin.ee/jFkOyph"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-56"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <img src="/line_logo.svg" alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -431,7 +431,7 @@ function App() {
                 href="https://www.instagram.com/hsuan.ya_official"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-56"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <Instagram className="relative w-8 h-8 flex-shrink-0 text-white" />
@@ -442,7 +442,7 @@ function App() {
                 href="https://www.facebook.com/tge.tiptop.genius/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-start gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-56"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <Facebook className="relative w-8 h-8 flex-shrink-0 text-white" />
