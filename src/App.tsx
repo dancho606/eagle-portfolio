@@ -81,7 +81,7 @@ function App() {
                     className="block relative w-full rounded-3xl overflow-hidden border-2 border-amber-500/20 shadow-2xl backdrop-blur-sm cursor-pointer"
                   >
                     <img
-                      src="/images/line_connect.jpg"
+                      src={realEstate.image}
                       alt="Connect on LINE"
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                     />
