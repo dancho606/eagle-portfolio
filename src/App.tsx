@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GridCard } from './components/GridCard';
 import { LimousinePage } from './components/LimousinePage';
 import { WebDesignPage } from './components/WebDesignPage';
-import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate, quickLinks } from './data/content';
+import { services, kols, ventures, caseMatch, partners, news, mediaBadges, extremeMediaLogo, realEstate, quickLinks, hero, socialLinks, branding } from './data/content';
 
 type Tab = 'services' | 'kols' | 'caseMatch' | 'partners' | 'recommendations' | 'ventures';
 
@@ -42,9 +42,9 @@ function App() {
                   loop
                   playsInline
                   className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                  poster="/images/hero_poster_new.jpg"
+                  poster={hero.videoPoster}
                 >
-                  <source src="/videos/hero-video-compressed.mp4" type="video/mp4" />
+                  <source src={hero.videoSrc} type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
 
@@ -62,8 +62,8 @@ function App() {
 
                 {/* Visual Label */}
                 <div className="absolute bottom-6 md:bottom-10 right-6 md:right-10 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="text-[10px] tracking-[0.3em] text-amber-500 font-bold">2026 OFFICIAL SHOWREEL</div>
-                  <div className="text-xl md:text-2xl font-bold tracking-tighter mt-1 italic">形象影片</div>
+                  <div className="text-[10px] tracking-[0.3em] text-amber-500 font-bold">{hero.showreelLabel}</div>
+                  <div className="text-xl md:text-2xl font-bold tracking-tighter mt-1 italic">{hero.showreelSubLabel}</div>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ function App() {
 
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/tn70nnpKG_U?autoplay=1&mute=1&rel=0"
+                      src={hero.youtubeEmbed}
                       title="Robot Film"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -147,7 +147,7 @@ function App() {
 
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 w-full">
                   <a
-                    href="https://www.instagram.com/hsuan.ya_official"
+                    href={socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-purple-600/20 bg-purple-600/5 hover:bg-purple-600/10 rounded-lg transition-colors duration-300 group"
@@ -156,7 +156,7 @@ function App() {
                     <span className="text-purple-400 font-bold tracking-widest text-[10px] sm:text-sm">INSTAGRAM</span>
                   </a>
                   <a
-                    href="https://www.facebook.com/tge.tiptop.genius/"
+                    href={socialLinks.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-blue-600/20 bg-blue-600/5 hover:bg-blue-600/10 rounded-lg transition-colors duration-300 group"
@@ -165,12 +165,12 @@ function App() {
                     <span className="text-blue-400 font-bold tracking-widest text-[10px] sm:text-sm">FACEBOOK</span>
                   </a>
                   <a
-                    href="https://lin.ee/jFkOyph"
+                    href={socialLinks.line}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-start gap-3 px-4 sm:px-5 py-2 sm:py-2.5 border border-green-600/20 bg-green-600/5 hover:bg-green-600/10 rounded-lg transition-colors duration-300 group"
                   >
-                    <img src="/line_logo.svg" alt="LINE" className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <img src={socialLinks.lineLogo} alt="LINE" className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-green-400 font-bold tracking-widest text-[10px] sm:text-sm">LINE</span>
                   </a>
                 </div>
@@ -342,7 +342,7 @@ function App() {
                             {/* Image Section */}
                             <div className="aspect-[4/3] w-full overflow-hidden relative">
                               <img
-                                src={item.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"}
+                                src={item.image || branding.newsImageFallback}
                                 alt={item.title}
                                 loading="lazy"
                                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
@@ -417,18 +417,18 @@ function App() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://lin.ee/jFkOyph"
+                href={socialLinks.line}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-green-600/30 border border-green-800 relative overflow-hidden rounded-full w-full sm:w-56"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <img src="/line_logo.svg" alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <img src={socialLinks.lineLogo} alt="LINE" className="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="relative whitespace-nowrap">LINE</span>
               </a>
 
               <a
-                href="https://www.instagram.com/hsuan.ya_official"
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-purple-600/30 border border-purple-800 relative overflow-hidden rounded-full w-full sm:w-56"
@@ -439,7 +439,7 @@ function App() {
               </a>
 
               <a
-                href="https://www.facebook.com/tge.tiptop.genius/"
+                href={socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white font-bold text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-blue-600/30 border border-blue-800 relative overflow-hidden rounded-full w-full sm:w-56"
@@ -482,7 +482,7 @@ function App() {
             <a href="#" className="hover:text-amber-500 transition-colors">使用條款 Terms of Service</a>
           </div>
           <p className="text-zinc-700 text-[10px] tracking-wider mt-2">
-            Powered by <a href="/intellibrand_coming_soon.html" target="_blank" className="hover:text-amber-500 transition-colors duration-300 font-bold">智賦AI品牌行銷-theintellibrand</a>
+            Powered by <a href={branding.poweredByLink} target="_blank" className="hover:text-amber-500 transition-colors duration-300 font-bold">{branding.poweredByText}</a>
           </p>
         </div>
       </footer>

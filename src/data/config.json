@@ -728,5 +728,23 @@
                 "href": "https://lin.ee/S1t11Ff"
             }
         ]
+    },
+    "hero": {
+        "videoPoster": "/images/hero_poster_new.jpg",
+        "videoSrc": "/videos/hero-video-compressed.mp4",
+        "youtubeEmbed": "https://www.youtube.com/embed/tn70nnpKG_U?autoplay=1&mute=1&rel=0",
+        "showreelLabel": "2026 OFFICIAL SHOWREEL",
+        "showreelSubLabel": "形象影片"
+    },
+    "socialLinks": {
+        "instagram": "https://www.instagram.com/hsuan.ya_official",
+        "facebook": "https://www.facebook.com/tge.tiptop.genius/",
+        "line": "https://lin.ee/jFkOyph",
+        "lineLogo": "/line_logo.svg"
+    },
+    "branding": {
+        "newsImageFallback": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800",
+        "poweredByLink": "/intellibrand_coming_soon.html",
+        "poweredByText": "智賦AI品牌行銷-theintellibrand"
     }
 }

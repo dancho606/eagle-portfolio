@@ -62,3 +62,6 @@ export const extremeMediaLogo = (configData as any).extremeMediaLogo;
 export const realEstate = (configData as any).realEstate;
 export const quickLinks = (configData as any).quickLinks;
 export const limousineService = (configData as any).limousineService;
+export const hero = (configData as any).hero;
+export const socialLinks = (configData as any).socialLinks;
+export const branding = (configData as any).branding;
